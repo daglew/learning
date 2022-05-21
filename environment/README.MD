@@ -5,7 +5,7 @@ It is a file about how to prepare environment.
 * [Download python](#download-python)
 * [Download pycharm](#download-pycharm)
 * [Download git](#download-git)
-* [Install Notepad++](#install-notepad++)
+* [Install Notepad](#install-notepad)
 * [Create repository on github](#create-repository-on-github)
 * [Clone repository](#clone-repository-using-git-bash)
 * [Create a new branch](#create-a-new-branch)
@@ -40,7 +40,7 @@ Go to [git](https://git-scm.com/download/win)
 2. Install it.
 ```
 
-## Install Notepad++
+## Install Notepad
 Go to [notepad++](https://notepad-plus-plus.org/downloads/v8.4.1/)
 ```
 1. Go to Download Notepad++ v8.4.1.
