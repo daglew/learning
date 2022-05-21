@@ -15,38 +15,37 @@ It is a file about how to prepare environment.
 
 ## Download python
 
+ Go to [python](https://www.python.org/downloads/)
 ```
-1. Go to https://www.python.org/downloads/
-2. Download python 3.10.4
-3. Install it.
-4. Click windows button+r on your keyboard.
-5. Please provide "cmd" command
-6. Please use command "python3 --version" in cmd
-7. Check version of installed python.
+1. Download python 3.10.4
+2. Install it.
+3. Click windows button+r on your keyboard.
+4. Provide "cmd" command
+5. Use command "python3 --version" in cmd
+6. Check version of installed python.
 ```
 
 ## Download pycharm
-
+Go to [pycharm](https://www.jetbrains.com/pycharm/)
 ```
-1. Go to PyCharm
-2. Take community version.
-3. Install it
+1. Take community version.
+2. Install it.
 ```
 
 ## Download git
 
+Go to [git](https://git-scm.com/download/win)
 ```
-1. Go to Git - Downloading Package
-2. Download 32-bits version
-3. Install it.
+1. Download 32-bits version.
+2. Install it.
 ```
 
 ## Install Notepad++
-
+Go to [notepad++](https://notepad-plus-plus.org/downloads/v8.4.1/)
 ```
-1. Go to Download Notepad++ v8.4.1 | Notepad++
-2. Download 32-bit x86 installer
-3. Install it
+1. Go to Download Notepad++ v8.4.1 | Notepad++.
+2. Download 32-bit x86 installer.
+3. Install it.
 ``` 
 
 ## Create repository on Github
@@ -81,7 +80,7 @@ It is a file about how to prepare environment.
 ## Create a new branch
 
 ```
-1.Open Pycharm
+1. Open Pycharm
 2. Go to terminal
 3. Use command "git status"
 4. Check on what branch are you ( there should be information that you are on develop branch)
