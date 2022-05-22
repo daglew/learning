@@ -128,6 +128,6 @@ pip install -r requirements.txt
 
 ## Sprint1
 
-* ![image1](https://ibb.co/tBTs5Hn)
-* ![image2](https://ibb.co/n89zbvG)
-* ![image3](https://ibb.co/183GWSK)
+* ![image1](https://i.ibb.co/y0cyJNK/Przechwytywanie.png)
+* ![image2](https://i.ibb.co/936sNLD/Przechwytywanie1.png)
+* ![image3](https://i.ibb.co/SR2wCL0/Przechwytywanie2.png)
