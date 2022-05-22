@@ -10,7 +10,7 @@ It is a file about how to prepare environment.
 * [Clone repository](#clone-repository-using-git-bash)
 * [Create a new branch](#create-a-new-branch)
 * [Create prepare_environment file](#create-prepare_environment-file)
-
+* [Sprint1](#sprint1)
 
 
 ## Download python
@@ -125,3 +125,9 @@ pip install -r requirements.txt
 4. Go to this folder.
 5. Execute a script.
 ```
+
+## Sprint1
+
+* ![image1](https://i.ibb.co/y0cyJNK/Przechwytywanie.png)
+* ![image2](https://i.ibb.co/936sNLD/Przechwytywanie1.png)
+* ![image3](https://i.ibb.co/SR2wCL0/Przechwytywanie2.png)
