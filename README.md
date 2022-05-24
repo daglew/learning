@@ -39,4 +39,5 @@ git branch -d <nazwa brancha> - usunięcie brancha
 git pull - dociągnięcie zmian na branchu
 git commit -m "message" - zakomitowanie zmian czyli napisanie co sie zmienilo w tym commicie
 git push - wypuszczenie zmian do repozytorium
+git reset HEAD~liczba commitów - usuwanie niechcianego commita
 ```
