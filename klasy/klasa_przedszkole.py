@@ -27,9 +27,6 @@ zrp = prz.sprawdz_czy_starczy()
 print(zrp)
 
 
-
-
-
 def sprawdz_imie(imie):
     if imie == "Dagmara":
         return f"Prawidlowe imie to: {imie}"
@@ -40,29 +37,18 @@ spr = sprawdz_imie(imie="Dominika")
 print(spr)
 
 
+p = Przedszkole(sala=5, lawki=2, tablica=1, liczba_dzieci=9)
+pol = p.policz_lawki()
+print(pol)
 
-#
-#
-# p = Przedszkole(sala=5, lawki=2, tablica=1, liczba_dzieci=9)
-# pol = p.policz_lawki()
-# print(pol)
+p = Przedszkole(sala= 1, lawki=10, tablica=1, liczba_dzieci=20)
 
+pol = p.policz_lawki()
+print(pol)
 
+spr = p.sprawdz_czy_starczy()
+print(spr)
 
-
-
-
-
-#
-# p = Przedszkole(sala= 1, lawki=10, tablica=1, liczba_dzieci=20)
-#
-#
-# pol = p.policz_lawki()
-# print(pol)
-#
-# spr = p.sprawdz_czy_starczy()
-# print(spr)
-#
-# p.lawki = 20
-# spr = p.sprawdz_czy_starczy()
-# print(spr)
+p.lawki = 20
+spr = p.sprawdz_czy_starczy()
+print(spr)

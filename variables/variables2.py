@@ -10,8 +10,8 @@ print this variable
 
 zdanie_do_wyprintowania = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut " \
                           "labore et dolore magna aliqua."
-# print(zdanie_do_wyprintowania)
-# print(f"ZADANIE DO WYPRINTOWANIA: {zdanie_do_wyprintowania}")
+print(zdanie_do_wyprintowania)
+print(f"ZADANIE DO WYPRINTOWANIA: {zdanie_do_wyprintowania}")
 
 """
 Please create variables moj_str, moj_int, moj_float, moja_tuple, moja_lista, moj_dict with yours values and print values.
@@ -108,65 +108,65 @@ print(f"My value of key username is:{moj_slownik['username']},"
       f" value of password is:{moj_slownik['password']} ")
 
 
-# """
-# Print 5 position from str variable "Hello World"
-# """
-# str1 = "Hello World"
-# print(str1[4])
-#
-# """
-# Print first 5 position from str variable "Hello World"
-# """
-# str2 = "Hello World"
-# print(str2[0:4])
-#
-# """
-# Print last 5 position from str variable "Hello World"
-# """
-# str3 = "Hello World"
-# print(str3[-5:])
-#
-# """
-# Print variable "Hello World" as "dlroW olleH"
-# """
-# str4 = "Hello World"
-# print(str4[::-1])
-#
-# """
-# Check if "is" in str "Situation on the world is dangerous now"
-# """
-# str5 = "Situation on the world is dangerous now"
-# str6 = "is"
-# print(str6 in str5)
-# assert str6 in str5, f"If not True than False, {str6} not in {str5}"
+"""
+Print 5 position from str variable "Hello World"
+"""
+str1 = "Hello World"
+print(str1[4])
 
-# """
-# Check if "is" not in str "Situation on the world is dangerous now"
-# """
-# str7 = "Situation on the world is dangerous now"
-# str8 = "is"
-# print(str8 not in str7)
+"""
+Print first 5 position from str variable "Hello World"
+"""
+str2 = "Hello World"
+print(str2[0:4])
+
+"""
+Print last 5 position from str variable "Hello World"
+"""
+str3 = "Hello World"
+print(str3[-5:])
+
+"""
+Print variable "Hello World" as "dlroW olleH"
+"""
+str4 = "Hello World"
+print(str4[::-1])
+
+"""
+Check if "is" in str "Situation on the world is dangerous now"
+"""
+str5 = "Situation on the world is dangerous now"
+str6 = "is"
+print(str6 in str5)
+assert str6 in str5, f"If not True than False, {str6} not in {str5}"
+
+"""
+Check if "is" not in str "Situation on the world is dangerous now"
+"""
+str7 = "Situation on the world is dangerous now"
+str8 = "is"
+print(str8 not in str7)
 
 
-# a = 1
-# b = 2
-# c = 3
-#
-# print(a > b)
-# print(a == b)
-# print(a <= b)
-# print(a >= b)
-# print(a < b > c)
+a = 1
+b = 2
+c = 3
 
-# a = "125"
-# b = 124
-#
-# a1 = int(a)
-# print(a1)
-# print(type(a1))
-# assert b > a1, f"zmienna b:{b} nie jest wieksza od zmiennej a1:{a1}"
-# # b > a
-#
+print(a > b)
+print(a == b)
+print(a <= b)
+print(a >= b)
+print(a < b > c)
+
+a = "125"
+b = 124
+
+a1 = int(a)
+print(a1)
+print(type(a1))
+assert b > a1, f"zmienna b:{b} nie jest wieksza od zmiennej a1:{a1}"
+# b > a
+
 # tupla 2 pozycja
 # lista ostatnia pozycja
 # dict stworzyc 2 wartosci drugi klucz- key

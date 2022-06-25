@@ -54,19 +54,19 @@ print(type(liczba_int))
 
 
 
-# x = 3
-# assert x == 3, "sdfsdfsdsdffsd"
-#
-#
-# def wyswietl_pozycje(pozycja):
-#     if len(pozycja) == 7:
-#         print(f"Pozycja to: {pozycja} dlugosc pozycji to: {len(pozycja)}")
-#     elif len(pozycja) == 3:
-#         print(f"Pozycja to: {pozycja} dlugosc pozycji to: {len(pozycja)}")
-#     else:
-#         print("nic")
+x = 3
+assert x == 3, "sdfsdfsdsdffsd"
 
-#
-# wyswietl_pozycje(pozycja=pozycja_lista)
+
+def wyswietl_pozycje(pozycja):
+    if len(pozycja) == 7:
+        print(f"Pozycja to: {pozycja} dlugosc pozycji to: {len(pozycja)}")
+    elif len(pozycja) == 3:
+        print(f"Pozycja to: {pozycja} dlugosc pozycji to: {len(pozycja)}")
+    else:
+        print("nic")
+
+
+wyswietl_pozycje(pozycja=pozycja_lista)
 
 

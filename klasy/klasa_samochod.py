@@ -15,7 +15,6 @@ class Samochod():
             return f"Wiek kierowcy to:{self.wiek} nie jest uprawniony do prowadzenia pojazdow."
 
 
-
 c = Samochod(kierowca="Michal", wiek=20, marka= "ford")
 inf = c.info_o_kierowcy()
 print(inf)

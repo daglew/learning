@@ -141,44 +141,44 @@ print(a >= b)
 print(a < b > c)
 
 
-# """
-# Print 5 position from str variable "Hello World"
-# """
-# str1 = "Hello World"
-# print(str1[4])
-#
-# """
-# Print first 5 position from str variable "Hello World"
-# """
-# str2 = "Hello World"
-# print(str2[0:4])
-#
-# """
-# Print last 5 position from str variable "Hello World"
-# """
-# str3 = "Hello World"
-# print(str3[-5:])
-#
-# """
-# Print variable "Hello World" as "dlroW olleH"
-# """
-# str4 = "Hello World"
-# print(str4[::-1])
-#
-# """
-# Check if "is" in str "Situation on the world is dangerous now"
-# """
-# str5 = "Situation on the world is dangerous now"
-# str6 = "is"
-# print(str6 in str5)
-# assert str6 in str5, f"If not True than False, {str6} not in {str5}"
+"""
+Print 5 position from str variable "Hello World"
+"""
+str1 = "Hello World"
+print(str1[4])
 
-# """
-# Check if "is" not in str "Situation on the world is dangerous now"
-# """
-# str7 = "Situation on the world is dangerous now"
-# str8 = "is"
-# print(str8 not in str7)
+"""
+Print first 5 position from str variable "Hello World"
+"""
+str2 = "Hello World"
+print(str2[0:4])
+
+"""
+Print last 5 position from str variable "Hello World"
+"""
+str3 = "Hello World"
+print(str3[-5:])
+
+"""
+Print variable "Hello World" as "dlroW olleH"
+"""
+str4 = "Hello World"
+print(str4[::-1])
+
+"""
+Check if "is" in str "Situation on the world is dangerous now"
+"""
+str5 = "Situation on the world is dangerous now"
+str6 = "is"
+print(str6 in str5)
+assert str6 in str5, f"If not True than False, {str6} not in {str5}"
+
+"""
+Check if "is" not in str "Situation on the world is dangerous now"
+"""
+str7 = "Situation on the world is dangerous now"
+str8 = "is"
+print(str8 not in str7)
 
 print()
 

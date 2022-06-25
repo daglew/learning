@@ -1,57 +1,57 @@
-# """
-# stwórz zmienną "1"
-# - wyprintuj typ zmiennej
-# - przekonweruj zmienną na inta
-# - wyprintuj
-# """
-# print("zadanie_1")
-#
-# zmienna_1 = "1"
-# print(type(zmienna_1))
-#
-# zmienna_1_intiger = int(zmienna_1)
-#
-# print(zmienna_1_intiger)
-# print(type(zmienna_1_intiger))
+"""
+stwórz zmienną "1"
+- wyprintuj typ zmiennej
+- przekonweruj zmienną na inta
+- wyprintuj
+"""
+print("zadanie_1")
+
+zmienna_1 = "1"
+print(type(zmienna_1))
+
+zmienna_1_intiger = int(zmienna_1)
+
+print(zmienna_1_intiger)
+print(type(zmienna_1_intiger))
 
 
-# """
-# stwórz zmienną 1
-# stwórz f stringa który bedzie przyjmował zmienną rezultat: "1 podejście"
-# wyprintuj tego f stringa
-# """
-# print("zadanie_2")
+"""
+stwórz zmienną 1
+stwórz f stringa który bedzie przyjmował zmienną rezultat: "1 podejście"
+wyprintuj tego f stringa
+"""
+print("zadanie_2")
 
-# fortuna = 1
-# print(f"{fortuna} podejście")
-#
-# """
-# stwórz zmeinna [1, 2, 3, 4]
-# prziteruj po liście
-# wyprintuj każdy element z listy
-# rezultat:
-# 1
-# 2
-# 3
-# 4
-# """
-# print("zadanie_3")
+fortuna = 1
+print(f"{fortuna} podejście")
 
-# lot = [1, 2, 3, 4]
-# for element in lot:
-#     print(f"{element}")
+"""
+stwórz zmeinna [1, 2, 3, 4]
+prziteruj po liście
+wyprintuj każdy element z listy
+rezultat:
+1
+2
+3
+4
+"""
+print("zadanie_3")
 
-# """
-# stwórz [1, 2, 3, 4]
-# przeknowertuj ją na tuple
-# i wyprintuj
-# """
-# print("zadanie_4")
+lot = [1, 2, 3, 4]
+for element in lot:
+    print(f"{element}")
 
-# hop = [1, 2, 3, 4]
-# hop_tuple = tuple(hop)
-# print(type(hop_tuple))
-#
+"""
+stwórz [1, 2, 3, 4]
+przeknowertuj ją na tuple
+i wyprintuj
+"""
+print("zadanie_4")
+
+hop = [1, 2, 3, 4]
+hop_tuple = tuple(hop)
+print(type(hop_tuple))
+
 
 
 """ 

@@ -201,6 +201,7 @@ def set_country(country):
 
 
 def find_and_click(locator: str):
+
     if locator.startswith("//"):
         element = self.driver.find_element(By.XPATH, locator)
         element.click()
