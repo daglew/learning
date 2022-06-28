@@ -131,16 +131,136 @@ Jeżeli temperatura rybek jest wyzsza niz 23 stopnie to powstaja dwie dodatkowe 
 # print(dzielenie1)
 
 
-"""
-Napisz funkcje mnozenie wartosci z listy *2 +5
-"""
-def mnozenie(lista):
-    pusta_lista= []
-    for element in lista:
-        nowy_elemeny = element*2+5
-        pusta_lista.append(nowy_elemeny)
-    return pusta_lista
+# """
+# Napisz funkcje mnozenie wartosci z listy *2 +5
+# """
+# def mnozenie(lista):
+#     pusta_lista= []
+#     for element in lista:
+#         nowy_elemeny = element*2+5
+#         pusta_lista.append(nowy_elemeny)
+#     return pusta_lista
+#
+# lista8 = [2, 4, 6, 1.23]
+# trr = mnozenie(lista=lista8)
+# print(trr)
 
-lista8 = [2, 4, 6, 1.23]
-trr = mnozenie(lista=lista8)
-print(trr)
+# """
+# stworz funkcje ktora zwraca zmienna
+# """
+#
+# def zwracam_zmienna(zmienna):
+#     return zmienna
+#
+# lop=zwracam_zmienna(zmienna=2)
+# print(lop)
+
+# """
+# stworz funkcje zakupy ktora przyjmuje dwie zmienne ilosc, koszyk
+# jezeli koszyk jest True to zwroc f"ilosc zakupow niose w koszyku"
+# jezeli koszyk jest False to ma zwrocic f"ilosc zakupow niose w siatce"
+# """
+#
+# def zakupy(ilosc, koszyk):
+#     if koszyk == True:
+#         return f"Ilość zakupow: {ilosc}  niose w koszyku"
+#     elif koszyk == False:
+#         return f"Ilość zakupow: {ilosc}  niose w siatce"
+#     else:
+#         return f"Ilość zakupow: {ilosc} nie mam siatki ani koszyka"
+#
+# lidl= zakupy(ilosc=50, koszyk=True)
+# lidl_1= zakupy(ilosc=50, koszyk=False)
+# lidl_2= zakupy(ilosc=50, koszyk=6)
+#
+# print(lidl)
+# print(lidl_1)
+# print(lidl_2)
+
+
+# """
+# stworz funkcje ktora iteruje po liscie i mnozy licze przez siebie i zwraca nowa liste z tymi zmiennymi
+# """
+#
+# def iteruje_po_liscie(lista):
+#     pusta=[]
+#     for element in lista:
+#         element_razy_element = element * element
+#         pusta.append(element_razy_element)
+#     return pusta
+#
+# eee= iteruje_po_liscie(lista=[4,5,4,44])
+# print(eee)
+
+
+class Koszyk:
+    def __init__(self, warzywa, owoce, nabial):
+        self.warzywa = warzywa
+        self.owoce = owoce
+        self.nabial = nabial
+
+    def wyrzuc_warzywo(self):
+        self.warzywa = self.warzywa - 1
+        return self.warzywa
+
+    def wyrzuc_owoc(self):
+        self.owoce = self.owoce - 1
+        return self.owoce
+
+    def wyrzuc_nabial(self):
+        self.nabial = self.nabial - 1
+        return self.nabial
+
+    def dodaj_warzywo(self):
+        self.warzywa = self.warzywa + 1
+        return self.warzywa
+
+    def dodaj_owoc(self):
+        self.owoce = self.owoce + 1
+        return self.owoce
+
+    def dodaj_nabial(self):
+        self.nabial = self.nabial + 1_000_000
+        return self.nabial
+
+    def sumuj_koszyk(self):
+        return self.nabial + self.owoce + self.warzywa
+
+
+biedra = Koszyk(warzywa=10, owoce=3, nabial=2)
+
+wy_warzywo = biedra.wyrzuc_warzywo()
+print(wy_warzywo)
+
+wy_owoc = biedra.wyrzuc_owoc()
+print(wy_owoc)
+
+wy_nabial = biedra.wyrzuc_nabial()
+print(wy_nabial)
+
+dod_warz = biedra.dodaj_warzywo()
+print(dod_warz)
+
+dod_owo = biedra.dodaj_owoc()
+print(dod_owo)
+
+dod_nab = biedra.dodaj_nabial()
+print(dod_nab)
+
+sumu_kosz = biedra.sumuj_koszyk()
+print(sumu_kosz)
+
+
+
+
+
+
+# biedra_sumuj_koszyk = biedra.sumuj_koszyk()
+# print(biedra_sumuj_koszyk)
+#
+# wyrzucony_owoc = biedra.wyrzuc_owoc()
+# print(wyrzucony_owoc)
+# print(biedra.owoce)
+#
+# biedra_sumuj_koszyk2 = biedra.sumuj_koszyk()
+# print(biedra_sumuj_koszyk2)
