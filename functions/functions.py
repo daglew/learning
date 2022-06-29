@@ -191,76 +191,106 @@ Jeżeli temperatura rybek jest wyzsza niz 23 stopnie to powstaja dwie dodatkowe 
 #
 # eee= iteruje_po_liscie(lista=[4,5,4,44])
 # print(eee)
-
-
-class Koszyk:
-    def __init__(self, warzywa, owoce, nabial):
-        self.warzywa = warzywa
-        self.owoce = owoce
-        self.nabial = nabial
-
-    def wyrzuc_warzywo(self):
-        self.warzywa = self.warzywa - 1
-        return self.warzywa
-
-    def wyrzuc_owoc(self):
-        self.owoce = self.owoce - 1
-        return self.owoce
-
-    def wyrzuc_nabial(self):
-        self.nabial = self.nabial - 1
-        return self.nabial
-
-    def dodaj_warzywo(self):
-        self.warzywa = self.warzywa + 1
-        return self.warzywa
-
-    def dodaj_owoc(self):
-        self.owoce = self.owoce + 1
-        return self.owoce
-
-    def dodaj_nabial(self):
-        self.nabial = self.nabial + 1_000_000
-        return self.nabial
-
-    def sumuj_koszyk(self):
-        return self.nabial + self.owoce + self.warzywa
-
-
-biedra = Koszyk(warzywa=10, owoce=3, nabial=2)
-
-wy_warzywo = biedra.wyrzuc_warzywo()
-print(wy_warzywo)
-
-wy_owoc = biedra.wyrzuc_owoc()
-print(wy_owoc)
-
-wy_nabial = biedra.wyrzuc_nabial()
-print(wy_nabial)
-
-dod_warz = biedra.dodaj_warzywo()
-print(dod_warz)
-
-dod_owo = biedra.dodaj_owoc()
-print(dod_owo)
-
-dod_nab = biedra.dodaj_nabial()
-print(dod_nab)
-
-sumu_kosz = biedra.sumuj_koszyk()
-print(sumu_kosz)
-
-
-
-
-
-
-# biedra_sumuj_koszyk = biedra.sumuj_koszyk()
-# print(biedra_sumuj_koszyk)
 #
-# wyrzucony_owoc = biedra.wyrzuc_owoc()
-# print(wyrzucony_owoc)
-# print(biedra.owoce)
 #
-# biedra_sumuj_koszyk2 = biedra.sumuj_koszyk()
-# print(biedra_sumuj_koszyk2)
+# class Koszyk:
+#     def __init__(self, warzywa, owoce, nabial):
+#         self.warzywa = warzywa
+#         self.owoce = owoce
+#         self.nabial = nabial
+#
+#     def wyrzuc_warzywo(self):
+#         self.warzywa = self.warzywa - 1
+#         return self.warzywa
+#
+#     def wyrzuc_owoc(self):
+#         self.owoce = self.owoce - 1
+#         return self.owoce
+#
+#     def wyrzuc_nabial(self):
+#         self.nabial = self.nabial - 1
+#         return self.nabial
+#
+#     def dodaj_warzywo(self):
+#         self.warzywa = self.warzywa + 1
+#         return self.warzywa
+#
+#     def dodaj_owoc(self):
+#         self.owoce = self.owoce + 1
+#         return self.owoce
+#
+#     def dodaj_nabial(self):
+#         self.nabial = self.nabial + 1_000_000
+#         return self.nabial
+#
+#     def sumuj_koszyk(self):
+#         return self.nabial + self.owoce + self.warzywa
+#
+#
+# biedra = Koszyk(warzywa=10, owoce=3, nabial=2)
+#
+# wy_warzywo = biedra.wyrzuc_warzywo()
+# print(wy_warzywo)
+#
+# wy_owoc = biedra.wyrzuc_owoc()
+# print(wy_owoc)
+#
+# wy_nabial = biedra.wyrzuc_nabial()
+# print(wy_nabial)
+#
+# dod_warz = biedra.dodaj_warzywo()
+# print(dod_warz)
+#
+# dod_owo = biedra.dodaj_owoc()
+# print(dod_owo)
+#
+# dod_nab = biedra.dodaj_nabial()
+# print(dod_nab)
+#
+# sumu_kosz = biedra.sumuj_koszyk()
+# print(sumu_kosz)
+
+
+# """
+# napisz funkcje ktora przyjmuje liste stringow
+# nastepnie zamienia ta liste stringow duzymi (calosc ma byc duzymi literami
+# """
+#
+# def lista_stringow_z_duzej(lista):
+#     nowa_lista=[]
+#     for element in lista:
+#         duzy_str = element.upper()
+#         nowa_lista.append(duzy_str)
+#     return nowa_lista
+#
+#
+# lista_z_str = ["papuga", "dog", "cat"]
+#
+# ff= lista_stringow_z_duzej(lista=lista_z_str)
+# print(ff)
+
+
+"""
+stworz funkcje ktora bedzie przyjmowala dict w ktorym musi znalezc sie klucz o nazwie lista z przypisana wartoscia jakiejs listy
+jezeli w kluczu bedzie lista to wyciagnij wartosc tego klucza 
+nastepnie przeiteruj po liscie i kazdy str w liscie podnies jako nazwa wlasna (jak tytul)
+"""
+
+
+def podnies_str_z_listy_dict(dict):
+    pusta_lista_str = []
+    for klucz, wartosc in dict.items():
+        if klucz == "lista":
+            lista_z_dicta= dict["lista"]
+
+    for element in lista_z_dicta:
+        if isinstance(element, str):
+            podniesiony_str = element.capitalize()
+            pusta_lista_str.append(podniesiony_str)
+    return pusta_lista_str
+
+
+slownik= {"lista":[1, True, "ghy", "gdynia", 3.21, None]}
+
+prz = podnies_str_z_listy_dict(dict=slownik)
+print(prz)
