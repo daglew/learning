@@ -269,28 +269,77 @@ Jeżeli temperatura rybek jest wyzsza niz 23 stopnie to powstaja dwie dodatkowe 
 # ff= lista_stringow_z_duzej(lista=lista_z_str)
 # print(ff)
 
+#
+# """
+# stworz funkcje ktora bedzie przyjmowala dict w ktorym musi znalezc sie klucz o nazwie lista z przypisana wartoscia jakiejs listy
+# jezeli w kluczu bedzie lista to wyciagnij wartosc tego klucza
+# nastepnie przeiteruj po liscie i kazdy str w liscie podnies jako nazwa wlasna (jak tytul)
+# """
+#
+#
+# def podnies_str_z_listy_dict(dict):
+#     pusta_lista_str = []
+#     for klucz, wartosc in dict.items():
+#         if klucz == "lista":
+#             lista_z_dicta= dict["lista"]
+#
+#     for element in lista_z_dicta:
+#         if isinstance(element, str):
+#             podniesiony_str = element.capitalize()
+#             pusta_lista_str.append(podniesiony_str)
+#     return pusta_lista_str
+#
+#
+# slownik= {"lista":[1, True, "ghy", "gdynia", 3.21, None]}
+#
+# prz = podnies_str_z_listy_dict(dict=slownik)
+# print(prz)
+
+
+lista = ["str", True, [1, 2, [1.25, True, False, [1, True, (), [], None, "str", 1.25]]]]
 
 """
-stworz funkcje ktora bedzie przyjmowala dict w ktorym musi znalezc sie klucz o nazwie lista z przypisana wartoscia jakiejs listy
-jezeli w kluczu bedzie lista to wyciagnij wartosc tego klucza 
-nastepnie przeiteruj po liscie i kazdy str w liscie podnies jako nazwa wlasna (jak tytul)
+napisz funkcje która bedzie przyjowała liste,
+nastepnie sprawdź instancje każdego elementu w liście,
+wyprintuj jaka to instancja  
 """
 
-
-def podnies_str_z_listy_dict(dict):
-    pusta_lista_str = []
-    for klucz, wartosc in dict.items():
-        if klucz == "lista":
-            lista_z_dicta= dict["lista"]
-
-    for element in lista_z_dicta:
+def sprawdzam_instancje(lista):
+    for element in lista:
         if isinstance(element, str):
-            podniesiony_str = element.capitalize()
-            pusta_lista_str.append(podniesiony_str)
-    return pusta_lista_str
+            print(f"Instancją elementu {element} jest str.")
+        elif isinstance(element, int):
+            print(f"Instancją elementu {element} jest int.")
+        elif isinstance(element, float):
+            print(f"Instancją elementu {element} jest float.")
+        elif isinstance(element, tuple):
+            print(f"Instancją elementu {element} jest tuple.")
+        elif isinstance(element, list):
+            print(f"Instancją elementu {element} jest list.")
+        elif isinstance(element, dict):
+            print(f"Instancją elementu {element} jest dict.")
+        elif isinstance(element, bool):
+            print(f"Instancją elementu {element} jest bool.")
+        else:
+            print(f"Brak instancji klasy lub None.")
 
+# lista = ["str", True, [1, 2, [1.25, True, False, [1, True, (), [], None, "str", 1.25]]]]
 
-slownik= {"lista":[1, True, "ghy", "gdynia", 3.21, None]}
+sprawdzam_instancje(lista=lista)
+print(lista)
 
-prz = podnies_str_z_listy_dict(dict=slownik)
-print(prz)
+lista_1 = lista[2]
+print(lista_1)
+sprawdzam_instancje(lista_1)
+
+lista_2 = lista_1[2]
+print(lista_2)
+sprawdzam_instancje(lista_2)
+
+lista_3 = lista_2[3]
+print(lista_3)
+sprawdzam_instancje(lista_3)
+
+lista_4 = lista_3[3]
+print(lista_4)
+sprawdzam_instancje(lista_4)
