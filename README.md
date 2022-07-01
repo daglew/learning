@@ -39,4 +39,12 @@ git branch -d <nazwa brancha> - usunięcie brancha
 git pull - dociągnięcie zmian na branchu
 git commit -m "message" - zakomitowanie zmian czyli napisanie co sie zmienilo w tym commicie
 git push - wypuszczenie zmian do repozytorium
+git reset HEAD~ <liczba commitów> - usuniecie niechcianych commitów które zostały zacommitowane na brancha
+   ale nie wypushowane 
+git stash - zapisanie/ zasavewowanie w pamięci podręcznej zmian na branchu w celu przeniesienia ich na 
+   innego brancha
+git stash pop - załadowanie zmian zapisanych za pomoca komendy git stash i wrzucenie ich na brancha na
+   ktorym jestesmy
+
+
 ```

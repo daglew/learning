@@ -294,52 +294,77 @@ Jeżeli temperatura rybek jest wyzsza niz 23 stopnie to powstaja dwie dodatkowe 
 #
 # prz = podnies_str_z_listy_dict(dict=slownik)
 # print(prz)
+#
+#
+# lista = ["str", True, [1, 2, [1.25, True, False, [1, True, (), [], None, "str", 1.25]]]]
+#
+# """
+# napisz funkcje która bedzie przyjowała liste,
+# nastepnie sprawdź instancje każdego elementu w liście,
+# wyprintuj jaka to instancja
+# """
+#
+# def sprawdzam_instancje(lista):
+#     for element in lista:
+#         if isinstance(element, str):
+#             print(f"Instancją elementu {element} jest str.")
+#         elif isinstance(element, int):
+#             print(f"Instancją elementu {element} jest int.")
+#         elif isinstance(element, float):
+#             print(f"Instancją elementu {element} jest float.")
+#         elif isinstance(element, tuple):
+#             print(f"Instancją elementu {element} jest tuple.")
+#         elif isinstance(element, list):
+#             print(f"Instancją elementu {element} jest list.")
+#         elif isinstance(element, dict):
+#             print(f"Instancją elementu {element} jest dict.")
+#         elif isinstance(element, bool):
+#             print(f"Instancją elementu {element} jest bool.")
+#         else:
+#             print(f"Brak instancji klasy lub None.")
+#
+# # lista = ["str", True, [1, 2, [1.25, True, False, [1, True, (), [], None, "str", 1.25]]]]
+#
+# sprawdzam_instancje(lista=lista)
+# print(lista)
+#
+# lista_1 = lista[2]
+# print(lista_1)
+# sprawdzam_instancje(lista_1)
+#
+# lista_2 = lista_1[2]
+# print(lista_2)
+# sprawdzam_instancje(lista_2)
+#
+# lista_3 = lista_2[3]
+# print(lista_3)
+# sprawdzam_instancje(lista_3)
+#
+# lista_4 = lista_3[3]
+# print(lista_4)
+# sprawdzam_instancje(lista_4)
 
-
-lista = ["str", True, [1, 2, [1.25, True, False, [1, True, (), [], None, "str", 1.25]]]]
 
 """
-napisz funkcje która bedzie przyjowała liste,
-nastepnie sprawdź instancje każdego elementu w liście,
-wyprintuj jaka to instancja  
+Stwórz funkcje która będzie przyjmowała listę stringów i intów
+jeśli będzie string to ma do niego dodać "xD" jeśli int to ma go przemożyć x2 
+zwróć nową listę z tymi zmiennymi które będą utworzone i ją zwróc
 """
 
-def sprawdzam_instancje(lista):
+lista_1 = ["hej", 48, "ho", 56, "po", 36, False, True]
+
+def dodaje_i_mnozy(lista):
+    pusta_lista = []
     for element in lista:
         if isinstance(element, str):
-            print(f"Instancją elementu {element} jest str.")
+            dodaje_str = element + "xD"
+            pusta_lista.append(dodaje_str)
         elif isinstance(element, int):
-            print(f"Instancją elementu {element} jest int.")
-        elif isinstance(element, float):
-            print(f"Instancją elementu {element} jest float.")
-        elif isinstance(element, tuple):
-            print(f"Instancją elementu {element} jest tuple.")
-        elif isinstance(element, list):
-            print(f"Instancją elementu {element} jest list.")
-        elif isinstance(element, dict):
-            print(f"Instancją elementu {element} jest dict.")
-        elif isinstance(element, bool):
-            print(f"Instancją elementu {element} jest bool.")
+             mnoze_int = element * 2
+             pusta_lista.append(mnoze_int)
         else:
-            print(f"Brak instancji klasy lub None.")
+            raise Exception(f"Ta lista przyjmuje tylko str i int. Zła zmienna {element} w liście")
+    return pusta_lista
 
-# lista = ["str", True, [1, 2, [1.25, True, False, [1, True, (), [], None, "str", 1.25]]]]
-
-sprawdzam_instancje(lista=lista)
-print(lista)
-
-lista_1 = lista[2]
-print(lista_1)
-sprawdzam_instancje(lista_1)
-
-lista_2 = lista_1[2]
-print(lista_2)
-sprawdzam_instancje(lista_2)
-
-lista_3 = lista_2[3]
-print(lista_3)
-sprawdzam_instancje(lista_3)
-
-lista_4 = lista_3[3]
-print(lista_4)
-sprawdzam_instancje(lista_4)
+kot = dodaje_i_mnozy(lista=lista_1)
+print(kot)
