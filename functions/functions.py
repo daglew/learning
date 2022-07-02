@@ -345,26 +345,56 @@ Jeżeli temperatura rybek jest wyzsza niz 23 stopnie to powstaja dwie dodatkowe 
 # sprawdzam_instancje(lista_4)
 
 
+# """
+# Stwórz funkcje która będzie przyjmowała listę stringów i intów
+# jeśli będzie string to ma do niego dodać "xD" jeśli int to ma go przemożyć x2
+# zwróć nową listę z tymi zmiennymi które będą utworzone i ją zwróc
+# """
+#
+# lista_1 = ["hej", 48, "ho", 56, "po", 36, False, True]
+#
+# def dodaje_i_mnozy(lista):
+#     pusta_lista = []
+#     for element in lista:
+#         if isinstance(element, str):
+#             dodaje_str = element + "xD"
+#             pusta_lista.append(dodaje_str)
+#         elif isinstance(element, int):
+#              mnoze_int = element * 2
+#              pusta_lista.append(mnoze_int)
+#         else:
+#             raise Exception(f"Ta lista przyjmuje tylko str i int. Zła zmienna {element} w liście")
+#     return pusta_lista
+#
+# kot = dodaje_i_mnozy(lista=lista_1)
+# print(kot)
+
+
 """
-Stwórz funkcje która będzie przyjmowała listę stringów i intów
-jeśli będzie string to ma do niego dodać "xD" jeśli int to ma go przemożyć x2 
-zwróć nową listę z tymi zmiennymi które będą utworzone i ją zwróc
+stworz funkcje ktora bedzie przyjmowala dicta zlozonego z kluczy jako str i value jako lista
+przeiteruj po dictcie
+wez wartosci z dicta sprawdz czy sa instanacj klasy lista
+nastepnie przeiteruj po listach
+zwroc typy zmiennych w nowej liscie
 """
 
-lista_1 = ["hej", 48, "ho", 56, "po", 36, False, True]
-
-def dodaje_i_mnozy(lista):
-    pusta_lista = []
-    for element in lista:
-        if isinstance(element, str):
-            dodaje_str = element + "xD"
-            pusta_lista.append(dodaje_str)
-        elif isinstance(element, int):
-             mnoze_int = element * 2
-             pusta_lista.append(mnoze_int)
+def dict_z_kluczy(dict):
+    pusta_lista_1 = []
+    for value in dict.values():
+        if isinstance(value, list):
+            for element in value:
+                pusta_lista_1.append(type(element))
         else:
-            raise Exception(f"Ta lista przyjmuje tylko str i int. Zła zmienna {element} w liście")
-    return pusta_lista
+            raise Exception(f"Value:{value} is not list.")
+    return pusta_lista_1
 
-kot = dodaje_i_mnozy(lista=lista_1)
-print(kot)
+dom_zla_wartosc = {"lista": ["okno", 7, "dach", "drzwi", "schody", 3, 67], "lista1": [56, "lozko", 15, "dywan", 20], "lista9":9 }
+dom = {"lista": ["okno", 7, "dach", "drzwi", "schody", 3, 67], "lista1": [56, "lozko", 15, "dywan", 20]}
+
+
+typy_zmiennych = dict_z_kluczy(dict=dom)
+print(typy_zmiennych)
+typy_zmiennych_zly = dict_z_kluczy(dict=dom_zla_wartosc)
+print(typy_zmiennych_zly)
+
+
