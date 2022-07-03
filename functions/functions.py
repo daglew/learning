@@ -369,32 +369,61 @@ Jeżeli temperatura rybek jest wyzsza niz 23 stopnie to powstaja dwie dodatkowe 
 # kot = dodaje_i_mnozy(lista=lista_1)
 # print(kot)
 
+#
+# """
+# stworz funkcje ktora bedzie przyjmowala dicta zlozonego z kluczy jako str i value jako lista
+# przeiteruj po dictcie
+# wez wartosci z dicta sprawdz czy sa instanacj klasy lista
+# nastepnie przeiteruj po listach
+# zwroc typy zmiennych w nowej liscie
+# """
+#
+# def dict_z_kluczy(dictionary):
+#     pusta_lista_1 = []
+#     for value in dictionary.values():
+#         if isinstance(value, list):
+#             for element in value:
+#                 pusta_lista_1.append(type(element))
+#         else:
+#             raise Exception(f"Value:{value} is not list.")
+#     return pusta_lista_1
+#
+# dom_zla_wartosc = {"lista": ["okno", 7, "dach", "drzwi", "schody", 3, 67], "lista1": [56, "lozko", 15, "dywan", 20], "lista9":9 }
+# dom = {"lista": ["okno", 7, "dach", "drzwi", "schody", 3, 67], "lista1": [56, "lozko", 15, "dywan", 20]}
+#
+#
+# typy_zmiennych = dict_z_kluczy(dictionary=dom)
+# print(typy_zmiennych)
+# typy_zmiennych_zly = dict_z_kluczy(dictionary=dom_zla_wartosc)
+# print(typy_zmiennych_zly)
+
 
 """
-stworz funkcje ktora bedzie przyjmowala dicta zlozonego z kluczy jako str i value jako lista
-przeiteruj po dictcie
-wez wartosci z dicta sprawdz czy sa instanacj klasy lista
-nastepnie przeiteruj po listach
-zwroc typy zmiennych w nowej liscie
+Stworz funkcje ktora przyjmuje dwa paramtery, slowo i iterator
+przeiteruj tyle razy ile dasz w zmiennej iterator i do słowa dodaj numer iteracji
+przydaten iterwoanie w zakresie " np. in range(0,3)
 """
 
-def dict_z_kluczy(dict):
-    pusta_lista_1 = []
-    for value in dict.values():
-        if isinstance(value, list):
-            for element in value:
-                pusta_lista_1.append(type(element))
-        else:
-            raise Exception(f"Value:{value} is not list.")
-    return pusta_lista_1
-
-dom_zla_wartosc = {"lista": ["okno", 7, "dach", "drzwi", "schody", 3, 67], "lista1": [56, "lozko", 15, "dywan", 20], "lista9":9 }
-dom = {"lista": ["okno", 7, "dach", "drzwi", "schody", 3, 67], "lista1": [56, "lozko", 15, "dywan", 20]}
+def lista_iter(slowo, iterator):
+    pusta_lista = []
+    for element in range(0, iterator):
+        slowo_z_iteracja = f"{slowo}{iterator}"
+        pusta_lista.append(slowo_z_iteracja)
+    return pusta_lista
 
 
-typy_zmiennych = dict_z_kluczy(dict=dom)
-print(typy_zmiennych)
-typy_zmiennych_zly = dict_z_kluczy(dict=dom_zla_wartosc)
-print(typy_zmiennych_zly)
+pies = lista_iter(slowo="kot", iterator=34)
+print(pies)
 
+
+"""
+zrób funkcje ktroa zwraca wynik dodawania dwoch liczb
+"""
+
+def dodawanie_liczb(liczba_1, liczba_2):
+    wynik=(liczba_1+liczba_2)
+    return wynik
+
+wwyy=dodawanie_liczb(liczba_1=1, liczba_2=2)
+print(wwyy)
 
