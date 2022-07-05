@@ -46,5 +46,4 @@ git stash - zapisanie/ zasavewowanie w pamięci podręcznej zmian na branchu w c
 git stash pop - załadowanie zmian zapisanych za pomoca komendy git stash i wrzucenie ich na brancha na
    ktorym jestesmy
 
-
 ```
