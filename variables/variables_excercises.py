@@ -48,55 +48,82 @@ print("AZ09".isalnum())
 # isalpha()	zwraca True jesli w stringu sa same litery (bez spacji)
 print(moj_string.isalpha())
 
-# isdecimal()	zwraca True jeśli wszystkie znaki w ciągu są ułamkami dziesiętnymi
+# isdecimal()	zwraca True jeśli wszystkie znaki w str są ułamkami dziesiętnymi
 print(moj_string.isdecimal())
 
-# isdigit()	zwraca True jeśli wszystkie znaki w ciągu są cyframi
+# isdigit()	zwraca True jeśli wszystkie znaki w str są cyframi
 print(moj_string.isdigit())
 
-# # isidentifier()	Returns True if the string is an identifier
-# print(moj_string.isidentifier())
+# # isidentifier()	zwraca True jeśli str jest identyfikatorem
+print(moj_string.isidentifier())
 
-# islower()	zwraca True jeśli wszystkie znaki w ciągu są małymi literami
+# islower()	zwraca True jeśli wszystkie znaki w str są małymi literami
 print(moj_string.islower())
 
-# isnumeric()	zwraca True jeśli wszystkie znaki w ciągu są numeryczne
+# isnumeric()	zwraca True jeśli wszystkie znaki w str są numeryczne
 print(moj_string.isnumeric())
 
-# isprintable()	zwraca True jeśli wszystkie znaki w ciągu można wyprintowac
+# isprintable()	zwraca True jeśli wszystkie znaki w str można wyprintowac
 print(moj_string.isprintable())
-print()
-# isspace() zwraca True jeśli wszystkie znaki w ciągu to spacje
-# Returns True if all characters in the string are whitespaces
+
+# isspace() zwraca True jeśli wszystkie znaki w str to spacje
+print(" ".isspace())
 print(moj_string.isspace())
 
-# istitle()	Returns True if the string follows the rules of a title
+# istitle()	zwraca True jeśli str przestrzega zasad tytułu
+print(moj_string.istitle())
 
+# join()	Łączy elementy stringa np. spacja ktora wprowadzilam do str
+print(" ".join(("John", "Peter", "Vicky")))
 
+# lower()	Konwertuje str na calosc malymi literami
+print(moj_string.lower())
 
-# isupper()	Returns True if all characters in the string are upper case
-# join()	Joins the elements of an iterable to the end of the string
-# ljust()	Returns a left justified version of the string
-# lower()	Converts a string into lower case
-# lstrip()	Returns a left trim version of the string
-# maketrans()	Returns a translation table to be used in translations
-# partition()	Returns a tuple where the string is parted into three parts
-# replace()	Returns a string where a specified value is replaced with a specified value
-# rfind()	Searches the string for a specified value and returns the last position of where it was found
-# rindex()	Searches the string for a specified value and returns the last position of where it was found
-# rjust()	Returns a right justified version of the string
-# rpartition()	Returns a tuple where the string is parted into three parts
-# rsplit()	Splits the string at the specified separator, and returns a list
-# rstrip()	Returns a right trim version of the string
-# split()	Splits the string at the specified separator, and returns a list
-# splitlines()	Splits the string at line breaks and returns a list
-# startswith()	Returns true if the string starts with the specified value
-# strip()	Returns a trimmed version of the string
-# swapcase()	Swaps cases, lower case becomes upper case and vice versa
-# title()	Converts the first character of each word to upper case
-# translate()	Returns a translated string
-# upper()	Converts a string into upper case
-# zfill()	Fills the string with a specified number of 0 values at the beginning
+# lstrip()	Zwraca lewa wersja wykończenia string
+print(moj_string.lstrip())
+
+# replace()	Zwraca str gdzie okreslona  wartosc jest zastępowana inna określoną wartością
+print(moj_string.replace("string", "dom"))
+
+# rfind()	Przeszukuje str pod kątem określonej wartości i zwraca ostatnią pozycję, w której została znaleziona
+print(moj_string.rfind("moj"))
+
+# rpartition()	Zwraca tuple, w której łańcuch jest podzielony na trzy części
+print(moj_string.rpartition("moj"))
+
+# rsplit()	Dzieli ciąg znaków(str) według określonego separatora i zwraca listę
+print("apple, banana, cherry".rsplit(", "))
+
+# rstrip()	Zwraca odpowiednią wersję przycięcia str
+print(moj_string.rstrip())
+
+# split()	Dzieli str w określonym separatorze i zwraca listę
+print(moj_string.split())
+
+# splitlines()	Dzieli łańcuch w miejscu łamania linii i zwraca listę
+print(moj_string.splitlines())
+
+# startswith()	Zwraca true, jeśli str zaczyna się od określonej wartości
+print(moj_string.startswith("m"))
+
+# strip()	Zwraca przyciętą wersję str
+print(moj_string.strip())
+
+# swapcase()  # Zamienia litery, małe litery stają się dużymi i na odwrót
+print(moj_string.swapcase())
+
+# title()	Zamienia pierwszy znak każdego słowa na wielkie litery
+print(moj_string.title())
+
+# # translate()	Zwraca przetłumaczony str
+# print(moj_string.translate())
+# print()
+
+# upper()	Konwertuje napis na wielkie litery
+print(moj_string.upper())
+
+# zfill()	Wypełnia str określoną liczbą wartości 0 na początku
+print(moj_string.zfill(21))
 
 
 
