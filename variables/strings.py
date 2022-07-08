@@ -19,6 +19,14 @@ for element in moj_string:
 przykladowy_fstr = f"Tutaj wklejam zmienna moj string:{moj_string}"
 print(przykladowy_fstr)
 
+# dodawanie stringa
+str1 = "a"
+str2 = "b"
+str3 = str1 + " " + str2
+print(str3)
+# szybsze rozwiazanie
+print(f"{str1} {str2}")
+
 #  wykonuje operacje na instancji klasy moj_string
 
 # capitalize()	podnies pierwsza litere
