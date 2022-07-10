@@ -1,5 +1,9 @@
 moj_dict = {"slownik": "wartosc", 20: [3, 4]}
 
+#  wyciagam wartosc tak jak w liscie tylko po kluczu
+wyciagam_powartosci_klucza = moj_dict[20]
+print(wyciagam_powartosci_klucza)
+
 # iteracja po dicts
 dict_34 = {"foka": "morze", "pingwin": "lodowiec"}
 for key, value in dict_34.items():
