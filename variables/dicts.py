@@ -1,7 +1,7 @@
 moj_dict = {"slownik": "wartosc", 20: [3, 4]}
 
 #  wyciagam wartosc tak jak w liscie tylko po kluczu
-wyciagam_powartosci_klucza = moj_dict[20]
+wyciagam_powartosci_klucza = moj_dict["slownik"]
 print(wyciagam_powartosci_klucza)
 
 # iteracja po dicts
@@ -75,3 +75,34 @@ print(wartosc_1)
 # values()	Zwraca listę wszystkich wartości w słowniku
 print(wartosc_1.values())
 
+
+"""
+dict_one = {"foka": 2, "wielblad": 4, "pingwin": 6}
+nowy_dict = {"foka": 4, "wielblad": 8, "pingwin": 12}
+użyj dict comprehhension
+"""
+# a_copy = {k: v for (k, v) in a.items()}
+dict_one = {"foka": 2, "wielblad": 4, "pingwin": 6}
+
+wartosc_wielblad = dict_one["wielblad"]
+print(wartosc_wielblad)
+print()
+
+nowy_dict = {k: v * 2 for k, v in dict_one.items()}
+print(nowy_dict)
+print(dict_one.items())
+print(dict_one.keys())
+print(dict_one.values())
+print()
+lista = [element for element in dict_one.keys()]
+print(lista)
+
+
+dict_nowy = {k: v*2 for k, v in dict_one.items() if v > 2}
+print(dict_nowy)
+
+dict_2 = {}
+for k, v in dict_one.items():
+    if v > 2:
+        dict_2.update({k: v*2})
+print(dict_2)
