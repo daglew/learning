@@ -178,3 +178,5 @@ liata_inta_2 = [1, 6, 13, (89, 67, "kolano")]
 lista_do_str_2 = [str(element) for element in liata_inta_2 if isinstance(element, tuple)]
 
 print(lista_do_str_2)
+
+
