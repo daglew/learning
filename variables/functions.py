@@ -51,30 +51,74 @@
 # wynik1 = dodawanie_f_str(zmienna111=111, zmienna222=222)
 # print(wynik1)
 #
-
-# funkcja która przyjmuje liste i sprawdza wszystkie typy, następnie zwraca dicta który zawiera jako klucz element a jako wartość typ
-
-lista45 = [23, "ohy", True, (78, "or"), None, 0]
-
-def sprawdza_typy(lista):
-    nowy_dict = {}
-    for element in lista:
-        if isinstance(element, str):
-            nowy_dict.update({element: type(element)})
-        elif isinstance(element, int):
-            nowy_dict.update({element: type(element)})
-        elif isinstance(element, tuple):
-            nowy_dict.update({element: type(element)})
-        elif isinstance(element, bool):
-            nowy_dict.update({element: type(element)})
-        elif isinstance(element, float):
-            nowy_dict.update({element: type(element)})
-    return nowy_dict
-
-
-xx = sprawdza_typy(lista45)
-print(xx)
-
-# funkcja która przyjmuje parametr który jest przypisany ale możemy go nadpisać
 #
-# funkcja która przyjmuje parametry liczba1, liczba2 i mnożnik_liczba_1 (który będzie przypisany jako boolean) jako None, następnie funkcja nam zwróci wynik mnożenia ale jak mnożnik nie będzie Nonem to liczba jeden będzie przemnożona przez 4
+# # funkcja która przyjmuje liste i sprawdza wszystkie typy, następnie zwraca dicta który zawiera jako klucz element a jako wartość typ
+#
+# lista45 = [23, "ohy", True, (78, "or"), None, 0]
+#
+# def sprawdza_typy(lista):
+#     nowy_dict = {}
+#     for element in lista:
+#         if isinstance(element, str):
+#             nowy_dict.update({element: type(element)})
+#         elif isinstance(element, int):
+#             nowy_dict.update({element: type(element)})
+#         elif isinstance(element, tuple):
+#             nowy_dict.update({element: type(element)})
+#         elif isinstance(element, bool):
+#             nowy_dict.update({element: type(element)})
+#         elif isinstance(element, float):
+#             nowy_dict.update({element: type(element)})
+#     return nowy_dict
+#
+#
+# xx = sprawdza_typy(lista45)
+# print(xx)
+#
+# # funkcja która przyjmuje parametr który jest przypisany ale możemy go nadpisać
+#
+#
+# def miejsce_do_siedzenia(krzesla, stol=1):
+#     return f"Ilosc stolow: {stol} z iloscia krzesel: {krzesla}"
+#
+#
+# print(miejsce_do_siedzenia(krzesla=3, stol=2))
+# print(miejsce_do_siedzenia(krzesla=3))
+# print(miejsce_do_siedzenia(krzesla=2))
+#
+#
+#
+#
+# # funkcja która przyjmuje parametry liczba1, liczba2 i mnożnik_liczba_1 (który będzie przypisany jako boolean) jako None,
+# # następnie funkcja nam zwróci wynik mnożenia ale jak mnożnik nie będzie Nonem to liczba jeden będzie przemnożona przez 4
+#
+# def mnozenie(liczba1, liczba2, mnoznik_liczba_1: bool=None):
+#     if mnoznik_liczba_1 is not None:
+#         liczba_1_x_4 = liczba1 * 4
+#         wynik = liczba_1_x_4 * liczba2
+#     else:
+#         wynik = liczba1*liczba2
+#     return wynik
+#
+# print(mnozenie(liczba1=1, liczba2=2))
+# print(mnozenie(liczba1=1, liczba2=2, mnoznik_liczba_1=True))
+# print(mnozenie(liczba1=1, liczba2=2, mnoznik_liczba_1=False))
+
+# kombinacja alpejska
+
+def kombinacja_alpejska(zdjecia, ramki=6, albumy=7, ksiazki: bool = None):
+    try:
+        if ksiazki is None:
+            ilosc_miejsc_na_zdj = ramki + albumy
+            potrzebne_miejsce = zdjecia - ilosc_miejsc_na_zdj
+        else:
+           potrzebne_miejsce = zdjecia - ramki
+        return potrzebne_miejsce
+    except TypeError:
+        raise Exception("Ktoras ze zmiennych ma zly typ.")
+
+
+
+print(kombinacja_alpejska(zdjecia=345, ramki=45, ksiazki=True))
+print(kombinacja_alpejska(zdjecia=345))
+print(kombinacja_alpejska(zdjecia=345, ramki=[], ksiazki="sy"))
