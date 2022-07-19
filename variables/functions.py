@@ -104,21 +104,36 @@
 # print(mnozenie(liczba1=1, liczba2=2, mnoznik_liczba_1=True))
 # print(mnozenie(liczba1=1, liczba2=2, mnoznik_liczba_1=False))
 
-# kombinacja alpejska
 
-def kombinacja_alpejska(zdjecia, ramki=6, albumy=7, ksiazki: bool = None):
-    try:
-        if ksiazki is None:
-            ilosc_miejsc_na_zdj = ramki + albumy
-            potrzebne_miejsce = zdjecia - ilosc_miejsc_na_zdj
+# # kombinacja alpejska
+#
+# def kombinacja_alpejska(zdjecia, ramki=6, albumy=7, ksiazki: bool = None):
+#     try:
+#         if ksiazki is None:
+#             ilosc_miejsc_na_zdj = ramki + albumy
+#             potrzebne_miejsce = zdjecia - ilosc_miejsc_na_zdj
+#         else:
+#            potrzebne_miejsce = zdjecia - ramki
+#         return potrzebne_miejsce
+#     except TypeError:
+#         raise Exception("Ktoras ze zmiennych ma zly typ.")
+#
+#
+#
+# print(kombinacja_alpejska(zdjecia=345, ramki=45, ksiazki=True))
+# print(kombinacja_alpejska(zdjecia=345))
+# print(kombinacja_alpejska(zdjecia=345, ramki=[], ksiazki="sy"))
+
+#  funkcja ktora przyjmuje inty, print kazdego elementu oraz print listy w liscie
+
+lista_int = [2, 4, 6, [5, 10, 15]]
+def funkcja_przyjmuje_liste(lista):
+    for ele in lista:
+        if isinstance(ele, list):
+            for elee in ele:
+                print(f"element z listy w liscie: {elee}")
         else:
-           potrzebne_miejsce = zdjecia - ramki
-        return potrzebne_miejsce
-    except TypeError:
-        raise Exception("Ktoras ze zmiennych ma zly typ.")
+            print(f"element z listy: {ele}")
 
+funkcja_przyjmuje_liste(lista_int)
 
-
-print(kombinacja_alpejska(zdjecia=345, ramki=45, ksiazki=True))
-print(kombinacja_alpejska(zdjecia=345))
-print(kombinacja_alpejska(zdjecia=345, ramki=[], ksiazki="sy"))
