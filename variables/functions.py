@@ -123,17 +123,45 @@
 # print(kombinacja_alpejska(zdjecia=345, ramki=45, ksiazki=True))
 # print(kombinacja_alpejska(zdjecia=345))
 # print(kombinacja_alpejska(zdjecia=345, ramki=[], ksiazki="sy"))
+#
+# #  funkcja ktora przyjmuje inty, print kazdego elementu oraz print listy w liscie
+#
+# lista_int = [2, 4, 6, [5, 10, 15]]
+# def funkcja_przyjmuje_liste(lista):
+#     for ele in lista:
+#         if isinstance(ele, list):
+#             for elee in ele:
+#                 print(f"element z listy w liscie: {elee}")
+#         else:
+#             print(f"element z listy: {ele}")
+#
+# funkcja_przyjmuje_liste(lista_int)
 
-#  funkcja ktora przyjmuje inty, print kazdego elementu oraz print listy w liscie
+"""
+funkcja ktora przyjmuje liste
+lista w niej kolejna lista i w niej kolejna
+stworz nowa_liste i wszystkie typy danych maja zostac w jedej nowej liscie
+bez list w srodku
+ma zwrocic nowa liste
+"""
+pierwotna_lista = [5, 55, ["gocha", 4, 8, [99, 9]]]
 
-lista_int = [2, 4, 6, [5, 10, 15]]
-def funkcja_przyjmuje_liste(lista):
-    for ele in lista:
-        if isinstance(ele, list):
-            for elee in ele:
-                print(f"element z listy w liscie: {elee}")
+
+def listy_w_liscie_w_liscie(lista):
+    nowa_lista = []
+    for eleme1 in lista:
+        if isinstance(eleme1, list):
+            for eleme2 in eleme1:
+                if isinstance(eleme2, list):
+                    for eleme3 in eleme2:
+                        nowa_lista.append(eleme3)
+                else:
+                    nowa_lista.append(eleme2)
         else:
-            print(f"element z listy: {ele}")
+            nowa_lista.append(eleme1)
 
-funkcja_przyjmuje_liste(lista_int)
+    return nowa_lista
 
+
+p = listy_w_liscie_w_liscie(pierwotna_lista)
+print(p)
