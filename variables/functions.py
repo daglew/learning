@@ -136,13 +136,13 @@
 #             print(f"element z listy: {ele}")
 #
 # funkcja_przyjmuje_liste(lista_int)
-
+#
 """
 funkcja ktora przyjmuje liste
-lista w niej kolejna lista i w niej kolejna
+lista, a w niej kolejna lista i w niej jeszcze jedna lista
 stworz nowa_liste i wszystkie typy danych maja zostac w jedej nowej liscie
 bez list w srodku
-ma zwrocic nowa liste
+zwroc nowa liste
 """
 pierwotna_lista = [5, 55, ["gocha", 4, 8, [99, 9]]]
 
@@ -165,3 +165,42 @@ def listy_w_liscie_w_liscie(lista):
 
 p = listy_w_liscie_w_liscie(pierwotna_lista)
 print(p)
+
+
+"""
+napisz funkcję która będze zaczytywała dane z najbardziej zagnieźdźonych elementów, sprawdzała ich instancje i wrzucała typ zmiennej do nowej listy
+lista = [1, True, 1.23, [1,2,3,4,[1, False, 1.23, "str"]]]  
+dict = {"pierwszy": [1, True, 1.23, [1,2,3,4,[1, False, 1.23, "str"]]] }
+"""
+
+lista1 = [1, True, 1.23, [1, 2, 3, 4, [1, False, 1.23, "str"]]]
+dict1 = {"pierwszy": [1, True, 1.23, [1, 2, 3, 4, [1, False, 1.23, "str"]]]}
+
+
+def zaczytanie_najbardziej_zagniezdzonych_elementow(zmienna):
+    if isinstance(zmienna, list):
+        lista = zmienna
+    elif isinstance(zmienna, dict):
+        lista = zmienna["pierwszy"]
+    else:
+        raise Exception("Bledny typ danych.")
+
+    nowa_lista = []
+
+    for g in lista:
+        if isinstance(g, list):
+            for element2 in g:
+                if isinstance(element2, list):
+                    for ostatni_elemen in element2:
+                        nowa_lista.append(type(ostatni_elemen))
+    return nowa_lista
+
+
+typy_lista = zaczytanie_najbardziej_zagniezdzonych_elementow(lista1)
+print(typy_lista)
+
+typy_dict = zaczytanie_najbardziej_zagniezdzonych_elementow(dict1)
+print(typy_dict)
+
+bledby_typ = zaczytanie_najbardziej_zagniezdzonych_elementow("kk")
+print(bledby_typ)
