@@ -56,7 +56,7 @@
 #     return zmienna
 #
 # funkcjia_ktora_przyjmuje_zmienna(zmienna_float)
-#
+
 # """"
 # funkcja przyjmuje list
 # sprawdz czy lista ma wartosc w srodku
@@ -86,43 +86,8 @@
 #
 #     return lista_z_nowymi_wartosciami, list_comprehension
 #
-#
-#
-#
-# # funkcja_przyjmuje_list(lista=lista_zmienna)
+## funkcja_przyjmuje_list(lista=lista_zmienna)
 # lista_z_nowymi_wartosciami, list_comprehension = funkcja_przyjmuje_list(lista=lista_ze_zmiennymi)
 # print(lista_z_nowymi_wartosciami)
 # print(list_comprehension)
-
-
-# """"
-# funkcja przyjmuje list
-# sprawdz czy lista ma wartosc w srodku
-# jesli niema wyrzuc wyjatek
-# nastepnie przeiteruj po wartosciach - for
-# zamien je w str
-# i dodaj xd
-# zwroc liste z nowymi wartosciami
-# exception (podana lista jest pusta)
-# """
-#
-# lista_zmienna = []
-# lista_ze_zmiennymi = [10, "rrr", 1.45, (5, 89), {"a": 23}]
-#
-#
-# def funkcja_przyjmuje_list(lista):
-#     if lista == []:
-#         raise Exception(f"Podana lista: {lista} jest pusta")
-#
-#     lista_z_nowymi_wartosciami = []
-#     for element in lista:
-#         string_plus_xd = f"{element}xd"
-#         lista_z_nowymi_wartosciami.append(string_plus_xd)
-#
-#     list_comprehension = [f"{element}xd" for element in lista]
-#
-#
-#     return lista_z_nowymi_wartosciami, list_comprehension
-#
-#
 #
