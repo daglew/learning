@@ -1,4 +1,4 @@
-gi# Learning
+# Learning
 It is my first repository, there will be all information about my learning
 
 ## Table of contents
