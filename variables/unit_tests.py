@@ -49,3 +49,61 @@
 # test_obracam_str()
 #
 # reverse= "ddfed eedcced efefve"
+
+
+"""
+please write the functions which is taking lists as a variable,
+in list you will have every single variable
+and your function will be creating new list
+which will be return only ints and floats
+
+please write the tests for this function
+"""
+list_one = [1, 4.56, (78, "po"), None, 9.99, 101, 3.24, "org", 8]
+
+
+def funkcja_ktora_przyjmuje_liste(list00):
+    new_list = []
+    for element in list00:
+        if isinstance(element, int):
+            new_list.append(element)
+        elif isinstance(element, float):
+            new_list.append(element)
+
+    return new_list
+
+
+o = funkcja_ktora_przyjmuje_liste(list00=list_one)
+print(o)
+
+
+def test_funkcji_ktora_przyjmuje_liste():
+    zmienna = [1, 4.56, (78, "po"), None, 9.99, 101, 3.24, "org", 8]
+    expected_result = [1, 4.56, 9.99, 101, 3.24, 8]
+    current_result = funkcja_ktora_przyjmuje_liste(list00=zmienna)
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}."
+
+test_funkcji_ktora_przyjmuje_liste()
+
+def test_funkcji_ktora_przyjmuje_liste_length():
+    zmienna = [1, 4.56, (78, "po"), None, 9.99, 101, 3.24, "org", 8]
+    expected_result = 6
+    current_result = funkcja_ktora_przyjmuje_liste(list00=zmienna)
+    assert expected_result == len(current_result), f"Expected length result: {expected_result} is not equal to current length result: {len(current_result)}."
+
+test_funkcji_ktora_przyjmuje_liste_length()
+
+def test_funkcji_ktora_przyjmuje_liste_negative():
+    zmienna = [1, 4.56, (78, "po"), None, 9.99, 101, 3.24, "org", 8]
+    expected_result = [1, 4.56, {"r": "l"}, 9.99, 101, 3.24, 8]
+    current_result = funkcja_ktora_przyjmuje_liste(list00=zmienna)
+    assert expected_result != current_result, f"Expected result: {expected_result} is equal to current result: {current_result}."
+
+test_funkcji_ktora_przyjmuje_liste_negative()
+
+def test_funkcji_ktora_przyjmuje_liste_type():
+    zmienna = [1, 4.56, (78, "po"), None, 9.99, 101, 3.24, "org", 8]
+    current_result = funkcja_ktora_przyjmuje_liste(list00=zmienna)
+    assert isinstance(current_result, list), f"Current result: {current_result} is not instance of list."
+
+test_funkcji_ktora_przyjmuje_liste_type()
