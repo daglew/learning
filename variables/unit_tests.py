@@ -120,6 +120,7 @@ def test_sprawdzam_czy_error():
 
 test_sprawdzam_czy_error()
 
+
 """
 please write the functions which is taking lists as a variable,
 in list you will have every single variable
