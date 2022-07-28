@@ -50,6 +50,75 @@
 #
 # reverse= "ddfed eedcced efefve"
 
+"""
+napisz funkcje ktora przyjmuje zmienna typu int, str, bool, float
+zwraca element jezlei okaze sie instancja danego typu
+napisz testy
+(if, elif, else)
+"""
+zmienna = 4
+
+def sprawdzam_typ(zmienna):
+    if isinstance(zmienna, str):
+        return zmienna
+    elif isinstance(zmienna, float):
+        return zmienna
+    elif isinstance(zmienna, bool):
+        return zmienna
+    elif isinstance(zmienna, int):
+        return zmienna
+    else:
+        return Exception(f"Inny tym zmiennej: {zmienna}")
+
+print(sprawdzam_typ(zmienna=zmienna))
+
+def test_sprawdzam_czy_int():
+    zmienna = 4
+    expected_result_int = zmienna
+    current_result = sprawdzam_typ(zmienna=zmienna)
+    assert expected_result_int == current_result, f"Expected result: {expected_result_int}" \
+                                                  f"is not equal to current result: {current_result}"
+
+test_sprawdzam_czy_int()
+
+
+def test_sprawdzam_czy_str():
+    zmienna = ""
+    expected_result_str = zmienna
+    current_result = sprawdzam_typ(zmienna=zmienna)
+    assert expected_result_str == current_result, f"Expected result: {expected_result_str}" \
+                                                  f"is not equal to current result: {current_result}"
+
+test_sprawdzam_czy_str()
+
+
+def test_sprawdzam_czy_bool():
+    zmienna = True
+    expected_result_bool = zmienna
+    current_result = sprawdzam_typ(zmienna=zmienna)
+    assert expected_result_bool == current_result, f"Expected result: {expected_result_bool}" \
+                                                  f"is not equal to current result: {current_result}"
+
+test_sprawdzam_czy_bool()
+
+
+def test_sprawdzam_czy_float():
+    zmienna = 2.23
+    expected_result_float = zmienna
+    current_result = sprawdzam_typ(zmienna=zmienna)
+    assert expected_result_float == current_result, f"Expected result: {expected_result_float}" \
+                                                  f"is not equal to current result: {current_result}"
+
+test_sprawdzam_czy_float()
+
+def test_sprawdzam_czy_error():
+    zmienna = ()
+    expected_result_error = zmienna
+    current_result = sprawdzam_typ(zmienna=zmienna)
+    assert expected_result_error != current_result, f"Expected result: {expected_result_error}" \
+                                                  f" is equal to current result: {current_result}"
+
+test_sprawdzam_czy_error()
 
 """
 please write the functions which is taking lists as a variable,
@@ -107,3 +176,4 @@ def test_funkcji_ktora_przyjmuje_liste_type():
     assert isinstance(current_result, list), f"Current result: {current_result} is not instance of list."
 
 test_funkcji_ktora_przyjmuje_liste_type()
+
