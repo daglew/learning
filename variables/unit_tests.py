@@ -183,7 +183,7 @@ stworz kalkulator (dwie liczy i dzialanie jako string)
 """
 
 
-def kalkulator(liczba_1, liczba_2, dzialanie):
+def kalkulator(liczba_1: int, liczba_2: int, dzialanie: str):
     if not isinstance(liczba_1, int) or not isinstance(liczba_2, int):
         return Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
     if not isinstance(dzialanie, str):
@@ -248,9 +248,10 @@ test_funkcji_kalkulator_dzielenie()
 
 
 def test_funkcji_kalkulator_bledne_dzialanie_str():
-    expected_result = "dzialanie"
-    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="drzwi")
-    assert expected_result != current_result, f"Expected result: {expected_result} is equal to current " \
+    dzialanie = "pop"
+    expected_result = f"Bad result {dzialanie}, expected dzialanie: dodawanie, odejmowanie, mnozenie, dzielenie"
+    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie=dzialanie)
+    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
                                               f"result: {current_result}."
 test_funkcji_kalkulator_bledne_dzialanie_str()
 
