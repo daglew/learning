@@ -183,7 +183,7 @@ stworz kalkulator (dwie liczy i dzialanie jako string)
 """
 
 
-def kalkulator(liczba_1, liczba_2, dzialanie):
+def kalkulator(liczba_1: int, liczba_2: int, dzialanie: str):
     if not isinstance(liczba_1, int) or not isinstance(liczba_2, int):
         return Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
     if not isinstance(dzialanie, str):
@@ -225,13 +225,69 @@ def test_funkcji_kalkulator_dodawanie():
                                               f"result: {current_result}."
 test_funkcji_kalkulator_dodawanie()
 
-# napisz testy:
-# test_funkcji_kalkulator_odejmowanie()
-# test_funkcji_kalkulator_mnozeniee()
-# test_funkcji_kalkulator_dzielenie()
-# test_funkcji_kalkulator_bledne_dzialanie_str()
-# test_funkcji_kalkulator_bledna_instancja_liczby1()
-# test_funkcji_kalkulator_bledna_instancja_liczby2()
-# test_funkcji_kalkulator_bledna_instancja_liczby1_liczba_2()
-# test_funkcji_kalkulator_bledna_instancja_dzialanie()
+def test_funkcji_kalkulator_odejmowanie():
+    expected_result = -1
+    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="odejmowanie")
+    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+                                              f"result: {current_result}."
+test_funkcji_kalkulator_odejmowanie()
 
+def test_funkcji_kalkulator_mnozenie():
+    expected_result = 2
+    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="mnozenie")
+    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+                                              f"result: {current_result}."
+test_funkcji_kalkulator_mnozenie()
+
+def test_funkcji_kalkulator_dzielenie():
+    expected_result = 0.5
+    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dzielenie")
+    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+                                              f"result: {current_result}."
+test_funkcji_kalkulator_dzielenie()
+
+
+def test_funkcji_kalkulator_bledne_dzialanie_str():
+    dzialanie = "pop"
+    expected_result = f"Bad result {dzialanie}, expected dzialanie: dodawanie, odejmowanie, mnozenie, dzielenie"
+    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie=dzialanie)
+    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+                                              f"result: {current_result}."
+test_funkcji_kalkulator_bledne_dzialanie_str()
+
+def test_funkcji_kalkulator_bledna_instancja_liczby1():
+    liczba_1 = "pop"
+    liczba_2 = 2
+    expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
+    current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
+    assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
+                                              f"result: {current_result}."
+test_funkcji_kalkulator_bledna_instancja_liczby1()
+
+def test_funkcji_kalkulator_bledna_instancja_liczby2():
+    liczba_1 = 1
+    liczba_2 = "pop"
+    expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
+    current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
+    assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
+                                              f"result: {current_result}."
+test_funkcji_kalkulator_bledna_instancja_liczby2()
+
+def test_funkcji_kalkulator_bledna_instancja_liczby1_liczba_2():
+    liczba_1 = "pop1"
+    liczba_2 = "pop2"
+    expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
+    current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
+    assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
+                                              f"result: {current_result}."
+test_funkcji_kalkulator_bledna_instancja_liczby1_liczba_2()
+
+def test_funkcji_kalkulator_bledna_instancja_dzialanie():
+    liczba_1 = 1
+    liczba_2 = 2
+    dzialanie = 50
+    expected_result = Exception(f"Dzialanie: {dzialanie} nie jest str.")
+    current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie=dzialanie)
+    assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
+                                              f"result: {current_result}."
+test_funkcji_kalkulator_bledna_instancja_dzialanie()
