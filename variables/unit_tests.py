@@ -177,117 +177,175 @@
 #     assert isinstance(current_result, list), f"Current result: {current_result} is not instance of list."
 #
 # test_funkcji_ktora_przyjmuje_liste_type()
+#
+# """
+# stworz kalkulator (dwie liczy i dzialanie jako string)
+# """
+#
+#
+# def kalkulator(liczba_1: int, liczba_2: int, dzialanie: str):
+#     if not isinstance(liczba_1, int) or not isinstance(liczba_2, int):
+#         return Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
+#     if not isinstance(dzialanie, str):
+#         return Exception(f"Dzialanie: {dzialanie} nie jest str.")
+#
+#     if dzialanie == "dodawanie":
+#         return liczba_1 + liczba_2
+#     elif dzialanie == "odejmowanie":
+#         return liczba_1 - liczba_2
+#     elif dzialanie == "mnozenie":
+#         return liczba_1 * liczba_2
+#     elif dzialanie == "dzielenie":
+#         return liczba_1 / liczba_2
+#     else:
+#         return f"Bad result {dzialanie}, expected dzialanie: dodawanie, odejmowanie, mnozenie, dzielenie"
+#
+#
+# dodwanie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dodawanie")
+# print(dodwanie)
+# odejmowanie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="odejmowanie")
+# print(odejmowanie)
+# mnozenie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="mnozenie")
+# print(mnozenie)
+# dzielenie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dzielenie")
+# print(dzielenie)
+# bledzne_dzialanie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="cokolwiek")
+# print(bledzne_dzialanie)
+#
+# sprawdzam_instancje_int = dzielenie = kalkulator(liczba_1="lol", liczba_2=2, dzialanie="dzielenie")
+# print(sprawdzam_instancje_int)
+# sprawdzam_instancje_str = mnozenie = kalkulator(liczba_1=1, liczba_2=2, dzialanie=10)
+# print(sprawdzam_instancje_str)
+#
+# # unit testy funkcji kalkulator
+# def test_funkcji_kalkulator_dodawanie():
+#     expected_result = 3
+#     current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dodawanie")
+#     assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_dodawanie()
+#
+# def test_funkcji_kalkulator_odejmowanie():
+#     expected_result = -1
+#     current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="odejmowanie")
+#     assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_odejmowanie()
+#
+# def test_funkcji_kalkulator_mnozenie():
+#     expected_result = 2
+#     current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="mnozenie")
+#     assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_mnozenie()
+#
+# def test_funkcji_kalkulator_dzielenie():
+#     expected_result = 0.5
+#     current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dzielenie")
+#     assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_dzielenie()
+#
+#
+# def test_funkcji_kalkulator_bledne_dzialanie_str():
+#     dzialanie = "pop"
+#     expected_result = f"Bad result {dzialanie}, expected dzialanie: dodawanie, odejmowanie, mnozenie, dzielenie"
+#     current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie=dzialanie)
+#     assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_bledne_dzialanie_str()
+#
+# def test_funkcji_kalkulator_bledna_instancja_liczby1():
+#     liczba_1 = "pop"
+#     liczba_2 = 2
+#     expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
+#     current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
+#     assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_bledna_instancja_liczby1()
+#
+# def test_funkcji_kalkulator_bledna_instancja_liczby2():
+#     liczba_1 = 1
+#     liczba_2 = "pop"
+#     expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
+#     current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
+#     assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_bledna_instancja_liczby2()
+#
+# def test_funkcji_kalkulator_bledna_instancja_liczby1_liczba_2():
+#     liczba_1 = "pop1"
+#     liczba_2 = "pop2"
+#     expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
+#     current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
+#     assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_bledna_instancja_liczby1_liczba_2()
+#
+# def test_funkcji_kalkulator_bledna_instancja_dzialanie():
+#     liczba_1 = 1
+#     liczba_2 = 2
+#     dzialanie = 50
+#     expected_result = Exception(f"Dzialanie: {dzialanie} nie jest str.")
+#     current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie=dzialanie)
+#     assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
+#                                               f"result: {current_result}."
+# test_funkcji_kalkulator_bledna_instancja_dzialanie()
+
 
 """
-stworz kalkulator (dwie liczy i dzialanie jako string)
+stworz funkcje ktora bedzie przyjmowala liste z roznymi typami zmiennych
+przytypuj liste przy parametrze(tylko lista bedzie brana do funkcji)
+funkcja bedzie tworzyla liste
+ktora bedzie brala tylko inty i wrzuca do nowej listy
+napisz do tej funkcji testy
 """
 
+lista_z_rozymi_typami = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
 
-def kalkulator(liczba_1: int, liczba_2: int, dzialanie: str):
-    if not isinstance(liczba_1, int) or not isinstance(liczba_2, int):
-        return Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
-    if not isinstance(dzialanie, str):
-        return Exception(f"Dzialanie: {dzialanie} nie jest str.")
+def przyjmuje_liste_z_roznymi_typam(lista: list):
+    docelowa_lista = []
+    for el in lista:
+        if isinstance(el, int):
+            docelowa_lista.append(el)
+        if isinstance(el, tuple) or isinstance(el, list):
+            for element in el:
+                if isinstance(element, int):
+                    docelowa_lista.append(element)
 
-    if dzialanie == "dodawanie":
-        return liczba_1 + liczba_2
-    elif dzialanie == "odejmowanie":
-        return liczba_1 - liczba_2
-    elif dzialanie == "mnozenie":
-        return liczba_1 * liczba_2
-    elif dzialanie == "dzielenie":
-        return liczba_1 / liczba_2
-    else:
-        return f"Bad result {dzialanie}, expected dzialanie: dodawanie, odejmowanie, mnozenie, dzielenie"
+    if len(lista) >= 1 and len(docelowa_lista) < 1:
+        raise Exception(f"Lista przekazana jako parametr: {lista}, nie zawiera intów. Docelowa lista:{docelowa_lista}"
+                        f"jest pusta")
+    return docelowa_lista
 
+print(przyjmuje_liste_z_roznymi_typam(lista=lista_z_rozymi_typami))
 
-dodwanie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dodawanie")
-print(dodwanie)
-odejmowanie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="odejmowanie")
-print(odejmowanie)
-mnozenie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="mnozenie")
-print(mnozenie)
-dzielenie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dzielenie")
-print(dzielenie)
-bledzne_dzialanie = kalkulator(liczba_1=1, liczba_2=2, dzialanie="cokolwiek")
-print(bledzne_dzialanie)
+def test_przyjmuje_liste_z_roznymi_typam():
+    zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
+    expected_result = [54, 89, 0, 5, 100, 999]
+    current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}"
 
-sprawdzam_instancje_int = dzielenie = kalkulator(liczba_1="lol", liczba_2=2, dzialanie="dzielenie")
-print(sprawdzam_instancje_int)
-sprawdzam_instancje_str = mnozenie = kalkulator(liczba_1=1, liczba_2=2, dzialanie=10)
-print(sprawdzam_instancje_str)
+test_przyjmuje_liste_z_roznymi_typam()
 
-# unit testy funkcji kalkulator
-def test_funkcji_kalkulator_dodawanie():
-    expected_result = 3
-    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dodawanie")
-    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_dodawanie()
+def test_przyjmuje_liste_z_roznymi_typam_negative():
+    zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
+    expected_result = [54, 89, 0, "kot", 100, 999]
+    current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
+    assert expected_result != current_result, f"Expected result: {expected_result} is equal to current result: {current_result}"
 
-def test_funkcji_kalkulator_odejmowanie():
-    expected_result = -1
-    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="odejmowanie")
-    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_odejmowanie()
+test_przyjmuje_liste_z_roznymi_typam_negative()
 
-def test_funkcji_kalkulator_mnozenie():
-    expected_result = 2
-    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="mnozenie")
-    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_mnozenie()
+def test_przyjmuje_liste_z_roznymi_typam_type():
+    zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
+    current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
+    assert isinstance(current_result, list), f"Expected result: {current_result} is not instance of list"
 
-def test_funkcji_kalkulator_dzielenie():
-    expected_result = 0.5
-    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie="dzielenie")
-    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_dzielenie()
+test_przyjmuje_liste_z_roznymi_typam_type()
 
-
-def test_funkcji_kalkulator_bledne_dzialanie_str():
-    dzialanie = "pop"
-    expected_result = f"Bad result {dzialanie}, expected dzialanie: dodawanie, odejmowanie, mnozenie, dzielenie"
-    current_result = kalkulator(liczba_1=1, liczba_2=2, dzialanie=dzialanie)
-    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_bledne_dzialanie_str()
-
-def test_funkcji_kalkulator_bledna_instancja_liczby1():
-    liczba_1 = "pop"
-    liczba_2 = 2
-    expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
-    current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
-    assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_bledna_instancja_liczby1()
-
-def test_funkcji_kalkulator_bledna_instancja_liczby2():
-    liczba_1 = 1
-    liczba_2 = "pop"
-    expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
-    current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
-    assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_bledna_instancja_liczby2()
-
-def test_funkcji_kalkulator_bledna_instancja_liczby1_liczba_2():
-    liczba_1 = "pop1"
-    liczba_2 = "pop2"
-    expected_result = Exception(f"Liczba_1: {liczba_1} lub liczba_2: {liczba_2} nie jest int.")
-    current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie="dzielenie")
-    assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_bledna_instancja_liczby1_liczba_2()
-
-def test_funkcji_kalkulator_bledna_instancja_dzialanie():
-    liczba_1 = 1
-    liczba_2 = 2
-    dzialanie = 50
-    expected_result = Exception(f"Dzialanie: {dzialanie} nie jest str.")
-    current_result = kalkulator(liczba_1=liczba_1, liczba_2=liczba_2, dzialanie=dzialanie)
-    assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
-                                              f"result: {current_result}."
-test_funkcji_kalkulator_bledna_instancja_dzialanie()
+# def test_przyjmuje_liste_z_roznymi_typam_wrong_parameter():
+#     zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
+#     current_result = przyjmuje_liste_z_roznymi_typam(lista=["kot"])
+#     assert True
+#
+# test_przyjmuje_liste_z_roznymi_typam_wrong_parameter()
