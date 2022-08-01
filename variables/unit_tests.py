@@ -343,9 +343,19 @@ def test_przyjmuje_liste_z_roznymi_typam_type():
 
 test_przyjmuje_liste_z_roznymi_typam_type()
 
-# def test_przyjmuje_liste_z_roznymi_typam_wrong_parameter():
-#     zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
-#     current_result = przyjmuje_liste_z_roznymi_typam(lista=["kot"])
-#     assert True
-#
-# test_przyjmuje_liste_z_roznymi_typam_wrong_parameter()
+def test_przyjmuje_liste_z_roznymi_typam_wrong_parameter():
+    zmienna = ["kot"]
+    docelowa_lista = []
+    expected_result = f"Lista przekazana jako parametr: {zmienna}, nie zawiera intów. Docelowa lista:{docelowa_lista}jest pusta"
+    current_result = None
+
+    try:
+        przyjmuje_liste_z_roznymi_typam(lista=zmienna)
+    except Exception as ex:
+        current_result = ex.args[0]
+
+    assert current_result is not None
+    assert current_result == expected_result, f"Expected result: {expected_result} is not eqoal to current result: {current_result}."
+
+
+test_przyjmuje_liste_z_roznymi_typam_wrong_parameter()
