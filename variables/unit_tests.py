@@ -291,71 +291,104 @@
 #     assert expected_result.args[0] == current_result.args[0], f"Expected result: {expected_result} is equal to current " \
 #                                               f"result: {current_result}."
 # test_funkcji_kalkulator_bledna_instancja_dzialanie()
-
+#
+#
+# """
+# stworz funkcje ktora bedzie przyjmowala liste z roznymi typami zmiennych
+# przytypuj liste przy parametrze(tylko lista bedzie brana do funkcji)
+# funkcja bedzie tworzyla liste
+# ktora bedzie brala tylko inty i wrzuca do nowej listy
+# napisz do tej funkcji testy
+# """
+#
+# lista_z_rozymi_typami = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
+#
+# def przyjmuje_liste_z_roznymi_typam(lista: list):
+#     docelowa_lista = []
+#     for el in lista:
+#         if isinstance(el, int):
+#             docelowa_lista.append(el)
+#         if isinstance(el, tuple) or isinstance(el, list):
+#             for element in el:
+#                 if isinstance(element, int):
+#                     docelowa_lista.append(element)
+#
+#     if len(lista) >= 1 and len(docelowa_lista) < 1:
+#         raise Exception(f"Lista przekazana jako parametr: {lista}, nie zawiera intów. Docelowa lista:{docelowa_lista}"
+#                         f"jest pusta")
+#     return docelowa_lista
+#
+# print(przyjmuje_liste_z_roznymi_typam(lista=lista_z_rozymi_typami))
+#
+# def test_przyjmuje_liste_z_roznymi_typam():
+#     zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
+#     expected_result = [54, 89, 0, 5, 100, 999]
+#     current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
+#     assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}"
+#
+# test_przyjmuje_liste_z_roznymi_typam()
+#
+# def test_przyjmuje_liste_z_roznymi_typam_negative():
+#     zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
+#     expected_result = [54, 89, 0, "kot", 100, 999]
+#     current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
+#     assert expected_result != current_result, f"Expected result: {expected_result} is equal to current result: {current_result}"
+#
+# test_przyjmuje_liste_z_roznymi_typam_negative()
+#
+# def test_przyjmuje_liste_z_roznymi_typam_type():
+#     zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
+#     current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
+#     assert isinstance(current_result, list), f"Expected result: {current_result} is not instance of list"
+#
+# test_przyjmuje_liste_z_roznymi_typam_type()
+#
+# def test_przyjmuje_liste_z_roznymi_typam_wrong_parameter():
+#     zmienna = ["kot"]
+#     docelowa_lista = []
+#     expected_result = f"Lista przekazana jako parametr: {zmienna}, nie zawiera intów. Docelowa lista:{docelowa_lista}jest pusta"
+#     current_result = None
+#
+#     try:
+#         przyjmuje_liste_z_roznymi_typam(lista=zmienna)
+#     except Exception as ex:
+#         current_result = ex.args[0]
+#
+#     assert current_result is not None
+#     assert current_result == expected_result, f"Expected result: {expected_result} is not eqoal to current result: {current_result}."
+#
+#
+# test_przyjmuje_liste_z_roznymi_typam_wrong_parameter()
 
 """
-stworz funkcje ktora bedzie przyjmowala liste z roznymi typami zmiennych
-przytypuj liste przy parametrze(tylko lista bedzie brana do funkcji)
-funkcja bedzie tworzyla liste
-ktora bedzie brala tylko inty i wrzuca do nowej listy
-napisz do tej funkcji testy
+napisz funkcje ktora bedzie wyciagala kazda wartosc z dicta
+sprawdzala czy ta wartosc jest lista
+jezeli jest lista to bedzie iterwala i wrzucala do nowej listy elementy z tej listy
+jezeli nie jest ma wyrzucic wyjatek bo ten dict przyjmuje listy jako wartosci
+napisz test jednostkowy (unit test)
 """
+dict_one = {"foka": [2, 4], "wielblad": [5, 10], "pingwin": [3, 6]}
+dict_negative = {"foka": [2, 4], "wielblad": "tron", "pingwin": [3, 6]}
+dict_puste_listy = {"foka": [], "wielblad": [], "pingwin": []}
+# lista = dict.values(dict_one)
+# print(lista)
+def funkcja_wyciaga_wartosc_z_dicta(dict):
+    if not len(dict.values()) >= 1:
+        raise Exception(f"Podany dict: {dict} nie zawiera wartosci.")
+    pusta_lista = []
+    for element in dict.values():
+        if isinstance(element, list):
+            for elementtt in element:
+                pusta_lista.append(elementtt)
+        if not isinstance(element, list):
+            raise Exception(f"Podany dict: {dict_one} przyjmuje inny typ jako wartosci.")
 
-lista_z_rozymi_typami = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
-
-def przyjmuje_liste_z_roznymi_typam(lista: list):
-    docelowa_lista = []
-    for el in lista:
-        if isinstance(el, int):
-            docelowa_lista.append(el)
-        if isinstance(el, tuple) or isinstance(el, list):
-            for element in el:
-                if isinstance(element, int):
-                    docelowa_lista.append(element)
-
-    if len(lista) >= 1 and len(docelowa_lista) < 1:
-        raise Exception(f"Lista przekazana jako parametr: {lista}, nie zawiera intów. Docelowa lista:{docelowa_lista}"
-                        f"jest pusta")
-    return docelowa_lista
-
-print(przyjmuje_liste_z_roznymi_typam(lista=lista_z_rozymi_typami))
-
-def test_przyjmuje_liste_z_roznymi_typam():
-    zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
-    expected_result = [54, 89, 0, 5, 100, 999]
-    current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
-    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}"
-
-test_przyjmuje_liste_z_roznymi_typam()
-
-def test_przyjmuje_liste_z_roznymi_typam_negative():
-    zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
-    expected_result = [54, 89, 0, "kot", 100, 999]
-    current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
-    assert expected_result != current_result, f"Expected result: {expected_result} is equal to current result: {current_result}"
-
-test_przyjmuje_liste_z_roznymi_typam_negative()
-
-def test_przyjmuje_liste_z_roznymi_typam_type():
-    zmienna = [54, 89, 0, "kot", (1.34, 5, "pies"), 100, 999]
-    current_result = przyjmuje_liste_z_roznymi_typam(lista=zmienna)
-    assert isinstance(current_result, list), f"Expected result: {current_result} is not instance of list"
-
-test_przyjmuje_liste_z_roznymi_typam_type()
-
-def test_przyjmuje_liste_z_roznymi_typam_wrong_parameter():
-    zmienna = ["kot"]
-    docelowa_lista = []
-    expected_result = f"Lista przekazana jako parametr: {zmienna}, nie zawiera intów. Docelowa lista:{docelowa_lista}jest pusta"
-    current_result = None
-
-    try:
-        przyjmuje_liste_z_roznymi_typam(lista=zmienna)
-    except Exception as ex:
-        current_result = ex.args[0]
-
-    assert current_result is not None
-    assert current_result == expected_result, f"Expected result: {expected_result} is not eqoal to current result: {current_result}."
+    if pusta_lista == []:
+        raise Exception(f"Podane wartosci w dict: {dict.values()} sa nieprawidlowe")
+    return pusta_lista
 
 
-test_przyjmuje_liste_z_roznymi_typam_wrong_parameter()
+# funkcja_wyciaga_wartosc_z_dicta(dict=dict_one)
+# funkcja_wyciaga_wartosc_z_dicta(dict=dict_negative)
+# funkcja_wyciaga_wartosc_z_dicta(dict=dict_puste_listy)
+funkcja_wyciaga_wartosc_z_dicta(dict={})
