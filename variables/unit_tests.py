@@ -367,9 +367,9 @@ jezeli jest lista to bedzie iterwala i wrzucala do nowej listy elementy z tej li
 jezeli nie jest ma wyrzucic wyjatek bo ten dict przyjmuje listy jako wartosci
 napisz test jednostkowy (unit test)
 """
-dict_one = {"foka": [2, 4], "wielblad": [5, 10], "pingwin": [3, 6]}
-dict_negative = {"foka": [2, 4], "wielblad": "tron", "pingwin": [3, 6]}
-dict_puste_listy = {"foka": [], "wielblad": [], "pingwin": []}
+# dict_one = {"foka": [2, 4], "wielblad": [5, 10], "pingwin": [3, 6]}
+# dict_negative = {"foka": [2, 4], "wielblad": "tron", "pingwin": [3, 6]}
+# dict_puste_listy = {"foka": [], "wielblad": [], "pingwin": []}
 # lista = dict.values(dict_one)
 # print(lista)
 def funkcja_wyciaga_wartosc_z_dicta(dict):
@@ -381,14 +381,46 @@ def funkcja_wyciaga_wartosc_z_dicta(dict):
             for elementtt in element:
                 pusta_lista.append(elementtt)
         if not isinstance(element, list):
-            raise Exception(f"Podany dict: {dict_one} przyjmuje inny typ jako wartosci.")
+            raise Exception(f"Podany dict: {dict} przyjmuje inny typ jako wartosci.")
 
     if pusta_lista == []:
         raise Exception(f"Podane wartosci w dict: {dict.values()} sa nieprawidlowe")
     return pusta_lista
 
 
-# funkcja_wyciaga_wartosc_z_dicta(dict=dict_one)
+# print(funkcja_wyciaga_wartosc_z_dicta(dict=dict_one))
 # funkcja_wyciaga_wartosc_z_dicta(dict=dict_negative)
 # funkcja_wyciaga_wartosc_z_dicta(dict=dict_puste_listy)
-funkcja_wyciaga_wartosc_z_dicta(dict={})
+# funkcja_wyciaga_wartosc_z_dicta(dict={})
+
+
+def test_pozytywny_funkcja_wyciaga_wartosc_z_dicta():
+    zmienna = {"foka": [2, 4], "wielblad": [5, 10], "pingwin": [3, 6]}
+    expected_result = [2, 4, 5, 10, 3, 6]
+    current_result = funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result:" \
+                                              f" {current_result}."
+
+# test_pozytywny_funkcja_wyciaga_wartosc_z_dicta()
+
+def test_negatywny_funkcja_wyciaga_wartosc_z_dicta():
+    zmienna = {"foka": [2, 4], "wielblad": "tron", "pingwin": [3, 6]}
+    expected_result = f"Podany dict: {zmienna} przyjmuje inny typ jako wartosci."
+    funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
+
+    try:
+         funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
+    except Exception as ex:
+        return
+    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current result: " \
+                                              f"{current_result}."
+
+test_negatywny_funkcja_wyciaga_wartosc_z_dicta()
+
+# def test_pustej_listy_funkcja_wyciaga_wartosc_z_dicta():
+#     zmienna = {"foka": [], "wielblad": [], "pingwin": []}
+#     expected_result = f"Wartos zmiennej dict przekazana jako parametr: {zmienna}, jest pusta."
+#     current_result = funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
+#     try:
+#         assert expected_result != current_result, f"Wartosc zmienna: {zmienna} jest pusta."
+#
