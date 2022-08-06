@@ -406,21 +406,39 @@ def test_pozytywny_funkcja_wyciaga_wartosc_z_dicta():
 def test_negatywny_funkcja_wyciaga_wartosc_z_dicta():
     zmienna = {"foka": [2, 4], "wielblad": "tron", "pingwin": [3, 6]}
     expected_result = f"Podany dict: {zmienna} przyjmuje inny typ jako wartosci."
-    funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
-
+    current_result = None
     try:
          funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
     except Exception as ex:
-        return
-    assert expected_result == current_result, f"Expected result: {expected_result} is equal to current result: " \
+        current_result = ex.args[0]
+
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: " \
                                               f"{current_result}."
 
 test_negatywny_funkcja_wyciaga_wartosc_z_dicta()
 
-# def test_pustej_listy_funkcja_wyciaga_wartosc_z_dicta():
-#     zmienna = {"foka": [], "wielblad": [], "pingwin": []}
-#     expected_result = f"Wartos zmiennej dict przekazana jako parametr: {zmienna}, jest pusta."
-#     current_result = funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
-#     try:
-#         assert expected_result != current_result, f"Wartosc zmienna: {zmienna} jest pusta."
-#
+def test_pustej_listy_funkcja_wyciaga_wartosc_z_dicta():
+    zmienna = {"foka": [], "wielblad": [], "pingwin": []}
+    expected_result = f"Podane wartosci w dict: {zmienna.values()} sa nieprawidlowe"
+    current_result = None
+    try:
+        funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
+    except Exception as ex:
+        current_result = ex.args[0]
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}."
+
+test_pustej_listy_funkcja_wyciaga_wartosc_z_dicta()
+
+def test_dict_funkcja_wyciaga_wartosc_z_dicta():
+    zmienna = {}
+    expected_result = f"Podany dict: {zmienna} nie zawiera wartosci."
+    current_result = None
+    try:
+        funkcja_wyciaga_wartosc_z_dicta(dict=zmienna)
+    except Exception as ex:
+        current_result = ex.args[0]
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}."
+
+
+test_dict_funkcja_wyciaga_wartosc_z_dicta()
+
