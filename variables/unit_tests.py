@@ -359,36 +359,77 @@
 #
 #
 # test_przyjmuje_liste_z_roznymi_typam_wrong_parameter()
+#
+# """
+# napisz funkcje ktora bedzie wyciagala kazda wartosc z dicta
+# sprawdzala czy ta wartosc jest lista
+# jezeli jest lista to bedzie iterwala i wrzucala do nowej listy elementy z tej listy
+# jezeli nie jest ma wyrzucic wyjatek bo ten dict przyjmuje listy jako wartosci
+# napisz test jednostkowy (unit test)
+# """
+# dict_one = {"foka": [2, 4], "wielblad": [5, 10], "pingwin": [3, 6]}
+# dict_negative = {"foka": [2, 4], "wielblad": "tron", "pingwin": [3, 6]}
+# dict_puste_listy = {"foka": [], "wielblad": [], "pingwin": []}
+# # lista = dict.values(dict_one)
+# # print(lista)
+# def funkcja_wyciaga_wartosc_z_dicta(dict):
+#     if not len(dict.values()) >= 1:
+#         raise Exception(f"Podany dict: {dict} nie zawiera wartosci.")
+#     pusta_lista = []
+#     for element in dict.values():
+#         if isinstance(element, list):
+#             for elementtt in element:
+#                 pusta_lista.append(elementtt)
+#         if not isinstance(element, list):
+#             raise Exception(f"Podany dict: {dict_one} przyjmuje inny typ jako wartosci.")
+#
+#     if pusta_lista == []:
+#         raise Exception(f"Podane wartosci w dict: {dict.values()} sa nieprawidlowe")
+#     return pusta_lista
+#
+#
+# # funkcja_wyciaga_wartosc_z_dicta(dict=dict_one)
+# # funkcja_wyciaga_wartosc_z_dicta(dict=dict_negative)
+# # funkcja_wyciaga_wartosc_z_dicta(dict=dict_puste_listy)
+# funkcja_wyciaga_wartosc_z_dicta(dict={})
+
 
 """
-napisz funkcje ktora bedzie wyciagala kazda wartosc z dicta
-sprawdzala czy ta wartosc jest lista
-jezeli jest lista to bedzie iterwala i wrzucala do nowej listy elementy z tej listy
-jezeli nie jest ma wyrzucic wyjatek bo ten dict przyjmuje listy jako wartosci
-napisz test jednostkowy (unit test)
+Napisz funcję która przyjmuje listę intów,
+kazdą liczbę mnoży x5
+a następnie dodaje do niej "razypiec" w stringu czyli "25razypiec"
+w liscie mogą byc tylko inty wiec stwórz warunek,
+jeżeli znajdzie sie jaki kolwiek inny typ danych wyrzuc wyjatek
+nowa lista ma zawierac wszystkie elmenty ze starej listy jako str z przyladu powyżej
+napisz testy
 """
-dict_one = {"foka": [2, 4], "wielblad": [5, 10], "pingwin": [3, 6]}
-dict_negative = {"foka": [2, 4], "wielblad": "tron", "pingwin": [3, 6]}
-dict_puste_listy = {"foka": [], "wielblad": [], "pingwin": []}
-# lista = dict.values(dict_one)
-# print(lista)
-def funkcja_wyciaga_wartosc_z_dicta(dict):
-    if not len(dict.values()) >= 1:
-        raise Exception(f"Podany dict: {dict} nie zawiera wartosci.")
+lista_intow = [2, 4, 5]
+
+def funkcja_przyjmujaca_liste_intow(lista: list):
     pusta_lista = []
-    for element in dict.values():
-        if isinstance(element, list):
-            for elementtt in element:
-                pusta_lista.append(elementtt)
-        if not isinstance(element, list):
-            raise Exception(f"Podany dict: {dict_one} przyjmuje inny typ jako wartosci.")
+    for elementtt in lista:
+        wynik = elementtt * 5
+        pusta_lista.append(wynik)
 
-    if pusta_lista == []:
-        raise Exception(f"Podane wartosci w dict: {dict.values()} sa nieprawidlowe")
-    return pusta_lista
+        for ele in pusta_lista:
+            docelowa = f"{ele}razypiec"
+        return docelowa
+        # if lista is not type(list):
+        #     raise Exception(f"Przekazana zmienna:{lista} nie jest typem listy.")
 
 
-# funkcja_wyciaga_wartosc_z_dicta(dict=dict_one)
-# funkcja_wyciaga_wartosc_z_dicta(dict=dict_negative)
-# funkcja_wyciaga_wartosc_z_dicta(dict=dict_puste_listy)
-funkcja_wyciaga_wartosc_z_dicta(dict={})
+
+
+
+
+    #     if isinstance(element, int):
+    #
+    #
+    #
+    #
+    #
+    #
+    #         pusta_lista = f"{element_razy_5}razypiec"
+    #         razy_piec_5 = element_razy_5.
+print(funkcja_przyjmujaca_liste_intow(lista=lista_intow))
+
