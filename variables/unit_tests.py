@@ -478,3 +478,53 @@ print(funkcja_przyjmujaca_liste_intow(lista=lista_intow))
 # print(funkcja_przyjmujaca_liste_intow(lista=[]))
 
 
+def test_pozytywny_funkcja_przyjmujaca_liste_intow():
+    zmienna = [2, 4, 5]
+    expected_result = ['10razypiec', '20razypiec', '25razypiec']
+    current_result = funkcja_przyjmujaca_liste_intow(lista=zmienna)
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to " \
+                                               f"current result: {current_result}."
+test_pozytywny_funkcja_przyjmujaca_liste_intow()
+
+
+def test_negatywny_funkcja_przyjmujaca_liste_intow_str():
+    zmienna = "strona"
+    expected_result = f"Przekazana zmienna:{zmienna} nie jest instancja klasy lista."
+    current_result = None
+    try:
+        funkcja_przyjmujaca_liste_intow(lista=zmienna)
+    except Exception as ex:
+        current_result = ex.args[0]
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to " \
+                                              f"current result: {current_result}."
+
+test_negatywny_funkcja_przyjmujaca_liste_intow_str()
+
+
+def test_inna_zmienna_w_funkcja_przyjmujaca_liste_intow():
+    zmienna = [2, "po"]
+    bledny_element = zmienna[1]
+    expected_result = f"Przekazany element: {bledny_element} nie jest intem w liscie: {zmienna}."
+    current_result = None
+    try:
+        funkcja_przyjmujaca_liste_intow(lista=zmienna)
+    except Exception as ex:
+        current_result = ex.args[0]
+
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to " \
+                                              f"current result: {current_result}."
+
+test_inna_zmienna_w_funkcja_przyjmujaca_liste_intow()
+
+def test_pusta_lista_w_funkcja_przyjmujaca_liste_intow():
+    zmienna = []
+    expected_result = f"Podana lista: {zmienna} jest pusta."
+    current_result = None
+    try:
+        funkcja_przyjmujaca_liste_intow(lista=zmienna)
+    except Exception as ex:
+        current_result = ex.args[0]
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to " \
+                                              f"current result: {current_result}."
+
+test_pusta_lista_w_funkcja_przyjmujaca_liste_intow()
