@@ -95,3 +95,29 @@ def test_negatywny_instancji_sciezki_funkcja_zaczytywanie_plikow():
 
 test_negatywny_instancji_sciezki_funkcja_zaczytywanie_plikow()
 
+
+def test_negatywny_bledna_sciezka_funkcja_zaczytywanie_plikow():
+    bledna_sciezka = f"{ROOT_DIR}/otwieranie_plikow/pliki/plik_xdxdxdxd.txt"
+    expected_result = f"Brak podanego folderu w sciezce: {bledna_sciezka}."
+    current_result = None
+    try:
+        funkcja_zaczytywanie_plikow(PATH=bledna_sciezka)
+    except Exception as ex:
+        current_result = ex.args[0]
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}." \
+
+
+test_negatywny_bledna_sciezka_funkcja_zaczytywanie_plikow()
+
+def test_funkcja_zaczytywanie_plikow_pusty_plik():
+    pusta_lista = [""]
+    pusty_plik_do_zaczytania = f"{ROOT_DIR}/otwieranie_plikow/pliki/plik_txt_3.txt"
+    expected_result = f"Plik jest pusty: {pusta_lista}, lub zawiera jeden element ktory jest pustym str."
+    current_result = None
+    try:
+        funkcja_zaczytywanie_plikow(PATH=pusty_plik_do_zaczytania)
+    except Exception as ex:
+        current_result = ex.args[0]
+    assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}." \
+
+test_funkcja_zaczytywanie_plikow_pusty_plik()
