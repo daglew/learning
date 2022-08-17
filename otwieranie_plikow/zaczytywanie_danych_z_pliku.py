@@ -121,3 +121,43 @@ def test_funkcja_zaczytywanie_plikow_pusty_plik():
     assert expected_result == current_result, f"Expected result: {expected_result} is not equal to current result: {current_result}." \
 
 test_funkcja_zaczytywanie_plikow_pusty_plik()
+
+
+
+"""
+napisz test ktory bedzie wykorzystywal funkcje do odczytu pliku 
+i sprawdzal czy numer 5 znajduje sie w odczytanym pliku
+"""
+
+def test_obecnosci_5_funkcja_zaczytywanie_plikow():
+    #expected variabls
+    sciezka_1 = f"{ROOT_DIR}/otwieranie_plikow/pliki/plik_txt.txt"
+    expected_result = '5 five'
+    # current_result = None
+
+    #current
+    lista = funkcja_zaczytywanie_plikow(PATH=sciezka_1)
+    for element in lista:
+        if element == expected_result:
+            current_result = element
+
+    #sprawdz expected result i current result
+    assert expected_result == current_result, f"Expected result: {expected_result} " \
+                                              f"is not equal to current result: {current_result}."
+test_obecnosci_5_funkcja_zaczytywanie_plikow()
+
+
+"""
+napisz test ktory sprawdza czy kazdy element w liscie jest str
+"""
+
+def test_sprawdzajacy_instancje_elementow_w_funkcja_zaczytywanie_plikow():
+    sciezka_1 = f"{ROOT_DIR}/otwieranie_plikow/pliki/plik_txt.txt"
+    expected_instance = str
+
+    lista = funkcja_zaczytywanie_plikow(PATH=sciezka_1)
+
+    for element in lista:
+        assert isinstance(element, expected_instance), f"Element: {element} is not instance string."
+
+test_sprawdzajacy_instancje_elementow_w_funkcja_zaczytywanie_plikow()
