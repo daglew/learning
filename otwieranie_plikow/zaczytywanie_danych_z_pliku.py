@@ -164,19 +164,22 @@ def funkcja_zaczytywanie_plikow(PATH):
 # test_sprawdzajacy_instancje_elementow_w_funkcja_zaczytywanie_plikow()
 #
 
+# """
+# napisz funkcje ktora otwiera pusty plik Z UPRAWNIENIAMI READ i wpisuje zadana wartosc nastepnie zamyka ten plik
+# """
+#
+# def funkcja_ktora_otwiera_pusty_plik(path, text):
+#     PATH = path
+#     with open(PATH,"w") as plik:
+#         plik.write("")
+#         plik.write(text)
+#         plik.close()
+#
+# funkcja_ktora_otwiera_pusty_plik(path=f"{ROOT_DIR}/otwieranie_plikow/pliki/plik_do_nadpisania_txt.txt", text="Wpisuje tekst do pustego pliku.")
+# sleep(5)
+# funkcja_ktora_otwiera_pusty_plik(path=f"{ROOT_DIR}/otwieranie_plikow/pliki/plik_do_nadpisania_txt.txt", text="1, 2, 3, 4")
+#
+#
 """
-napisz funkcje ktora otwiera pusty plik Z UPRAWNIENIAMI READ i wpisuje zadana wartosc nastepnie zamyka ten plik 
+
 """
-
-def funkcja_ktora_otwiera_pusty_plik(path, text):
-    PATH = path
-    with open(PATH,"w") as plik:
-        plik.write("")
-        plik.write(text)
-        plik.close()
-
-funkcja_ktora_otwiera_pusty_plik(path=f"{ROOT_DIR}/otwieranie_plikow/pliki/plik_do_nadpisania_txt.txt", text="Wpisuje tekst do pustego pliku.")
-sleep(5)
-funkcja_ktora_otwiera_pusty_plik(path=f"{ROOT_DIR}/otwieranie_plikow/pliki/plik_do_nadpisania_txt.txt", text="1, 2, 3, 4")
-
-
