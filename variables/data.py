@@ -20,6 +20,7 @@ print(x)
 x = datetime.datetime(2018, 6, 1)
 print(x.strftime("%B"))
 
+
 # odniesienie wszystkich kodow do formatowanego pliku
 # % zazwraca nazwe dnia tygodnia, wersja skrocona
 x = datetime.datetime.now()
@@ -81,7 +82,6 @@ print(x.strftime("%S"))
 x = datetime.datetime.now()
 print(x.strftime("%f"))
 
-
 # %j zwraca numer dnia w ciagu roku 001-366	365
 x = datetime.datetime.now()
 print(x.strftime("%j"))
@@ -109,11 +109,3 @@ print(x.strftime("%x"))
 # %X Lokalna wersja godziny	17:41:00
 x = datetime.datetime.now()
 print(x.strftime("%X"))
-
-
-
-
-
-
-
-
