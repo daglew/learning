@@ -2,6 +2,8 @@
 import json
 
 # to jest json
+import os
+
 x = '{"name": "John", "age": 30, "city": "New York"}'
 
 # zaczytanie jsona
@@ -11,12 +13,6 @@ imie = zaczytanie_x['name']
 wiek = zaczytanie_x['age']
 miasto = zaczytanie_x['city']
 print(f"wyciagnelam z jsona imie: {imie}, wiek: {wiek} oraz miasto: {miasto}.")
-
-
-
-
-
-
 
 # konwertowanie do jsona
 x = {
@@ -53,3 +49,18 @@ f = json.loads(g)
 print()
 billy= f['children'][1]
 mpg = f['cars'][0]['mpg']
+
+"""
+otwarcie pliku, zaczytanie danych i wyciagniecie numeru telefonu
+"""
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+plik = f"{ROOT_DIR}/jsons/sample2.json"
+with open(f"{ROOT_DIR}/jsons/sample2.json", "r") as aaa:
+  zaczytanie_aa = json.load(aaa)
+  number_phone = zaczytanie_aa['phoneNumbers'][0]['number']
+  print()
+
+
+
+
