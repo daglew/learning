@@ -67,6 +67,7 @@ wartosc_1 = {"foka": "morze", "wielblad": "piasek", "pingwin": "lodowiec"}
 wartosc_1.popitem()
 print(wartosc_1)
 
+
 # update()	dodaje do dicta za pomocą itemsow czyli klucz: wartosc
 wartosc_1 = {"foka": "morze", "wielblad": "piasek", "pingwin": "lodowiec"}
 wartosc_1.update({"kura": "ziarno"})

@@ -62,5 +62,17 @@ with open(f"{ROOT_DIR}/jsons/sample2.json", "r") as aaa:
   print()
 
 
+"""
+Otworz plik, zaczytaj dane,
+podmien wartosc.
+zapisac jsona i sprawdzic czy nowa wartosc jest zapisana. 
+"""
+
+plik_1 = f"{ROOT_DIR}/jsons/sample1.json"
+with open(plik_1, "r") as bbb:
+  zaczytanie_b = json.load(bbb)
+  zaczytanie_b['color'] = 'niebieski'
+  nowy_j = json.dumps(zaczytanie_b)
+  print()
 
 
