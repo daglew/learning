@@ -35,12 +35,19 @@ names = ['Ch', 'Dh', 'Eh', 'cb', 'Tb', 'Td', 'Chb', 'Tdb']
 names_lc = [b for b in names if b.lower().endswith('b') and len(names) > 2]
 print()
 
-# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 # sprawdź czy słowo ma a w wyrazie
 # result ['apple', 'banana', 'mango']
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+owoce = [c for c in fruits if 'a' in c]
+print()
 
-# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 # result ["Apple", "Banana", "Cherry", "Kiwi", "Mango"]
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+owoce_1 = [d.capitalize() for d in fruits]
+print()
 
-# lista = [x, y, x, y, x, y, x, y]
 # result = [iks, igrek, iks, igrek, iks, igrek, iks, igrek]
+lista_liter = ["x", "y", "x", "y", "x", "y", "x", "y"]
+# lista = [x, y, x, y, x, y, x, y]
+litery_wymowa = [e.replace("x", "iks").replace("y", "igrek") for e in lista_liter]
+print()
