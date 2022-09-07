@@ -99,28 +99,28 @@ print(type(liczba_zmienno_przecinkowa))
 
 ```python
 tupla = (1, 2, 3, "4", 1.25)
-# print(tupla)
-# print(tupla[0])
-# tupla[0] = 0
-# print(tupla)
+print(tupla)
+print(tupla[0])
+tupla[0] = 0
+print(tupla)
 # tupla - jest niemutowalna co oznacza ze niemozna w niej podmieniac elementow rozni sie tym od listy oraz nawiasem
 ```
 ```python
 lista = [1, 2, 3, "4", 1.25]
-# print(lista)
-# print(lista[0])
-# lista[0] = 0
-# print(lista)
+print(lista)
+print(lista[0])
+lista[0] = 0
+print(lista)
 # lista - jest mutowalna co oznacza w niej podmieniac elementy rozni sie nawiasem
 ```
 ```python
 dictionary = {"imie": "dagmara", "nazwisko": "lewandowska"}
-# print(dictionary)
-# print(dictionary["imie"])
-# print(dictionary["nazwisko"])
-# print(dictionary.values())
-# print(dictionary.keys())
-# print(type(dictionary))
+print(dictionary)
+print(dictionary["imie"])
+print(dictionary["nazwisko"])
+print(dictionary.values())
+print(dictionary.keys())
+print(type(dictionary))
 # dicty charakteryzuja sie klamrami {} oraz tym ze posiadaja klucz wartosc
 ```
 ```python

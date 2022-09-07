@@ -12,12 +12,12 @@ class PathsForProject:
     CHROMEDRIVER_PATH = os.path.join(ROOT_DIR, "chromedriver/chromedriver.exe")
 
 
-# class WebDriverTests(unittest.TestCase):
-#     def setUp(self):
-#         self.driver = webdriver.Chrome(PathsForProject.CHROMEDRIVER_PATH)
-#
-#     def tearDown(self):
-#         self.driver.close()
+class WebDriverTests(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome(PathsForProject.CHROMEDRIVER_PATH)
+
+    def tearDown(self):
+        self.driver.close()
 
 
 class TestCheckButton(unittest.TestCase):
