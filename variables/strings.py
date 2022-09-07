@@ -124,8 +124,8 @@ print(moj_string.swapcase())
 print(moj_string.title())
 
 # # translate()	Zwraca przetłumaczony str
-# print(moj_string.translate())
-# print()
+print(moj_string.translate())
+print()
 
 # upper()	Konwertuje napis na wielkie litery
 print(moj_string.upper())

@@ -5,14 +5,14 @@ Create empty_list = []
 please add to empty_list every element from first list x2
 result empty_list = [2, 6, 8, 10, 12]
 """
-# list_ = [1, 3, 4, 5, 6]
-# empty_list = []
-#
-# for element in list_:
-#     nowy_element = element * 2
-#     empty_list.append(nowy_element)
-#
-# print(empty_list)
+list_ = [1, 3, 4, 5, 6]
+empty_list = []
+
+for element in list_:
+    nowy_element = element * 2
+    empty_list.append(nowy_element)
+
+print(empty_list)
 
 
 

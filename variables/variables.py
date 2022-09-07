@@ -1,26 +1,26 @@
-# string = "zmienna"
-# name = "dagmara"
-#
-# print(name)
-# print(string)
-#
-# print(name.upper())
-# # print(name.upper()) -> nazwa duzymi literami np. DAGMARA
-#
-# print(name.capitalize())
-# # print(name.capitalize()) -> nazwa pierwsza litera duża np. Dagmara
-#
-# imie, nazwisko = "dagmara", "lewandowska"
-# print(imie, nazwisko)
-# print(nazwisko[2])
-# # print(nazwisko[2]) -> trzecia litera nazwiska
-#
-# print(len(nazwisko))
-# #  print(len(nazwisko)) -> wyciaga dlugosc znakow
-#
-# print(f"{imie} {string}")
-# # print(f"{imie} {string}") -> formatowanie stringow
-#
+string = "zmienna"
+name = "dagmara"
+
+print(name)
+print(string)
+
+print(name.upper())
+# print(name.upper()) -> nazwa duzymi literami np. DAGMARA
+
+print(name.capitalize())
+# print(name.capitalize()) -> nazwa pierwsza litera duża np. Dagmara
+
+imie, nazwisko = "dagmara", "lewandowska"
+print(imie, nazwisko)
+print(nazwisko[2])
+# print(nazwisko[2]) -> trzecia litera nazwiska
+
+print(len(nazwisko))
+#  print(len(nazwisko)) -> wyciaga dlugosc znakow
+
+print(f"{imie} {string}")
+# print(f"{imie} {string}") -> formatowanie stringow
+
 intiger = 1
 print(intiger)
 
@@ -53,26 +53,26 @@ print(liczba_zmienno_przecinkowa)
 print(type(liczba_zmienno_przecinkowa))
 
 tupla = (1, 2, 3, "4", 1.25)
-# print(tupla)
-# print(tupla[0])
-# tupla[0] = 0
-# print(tupla)
+print(tupla)
+print(tupla[0])
+tupla[0] = 0
+print(tupla)
 # tupla - jest niemutowalna co oznacza ze niemozna w niej podmieniac elementow rozni sie tym od listy oraz nawiasem
 
 lista = [1, 2, 3, "4", 1.25]
-# print(lista)
-# print(lista[0])
-# lista[0] = 0
-# print(lista)
+print(lista)
+print(lista[0])
+lista[0] = 0
+print(lista)
 # lista - jest mutowalna co oznacza w niej podmieniac elementy rozni sie nawiasem
 
 dictionary = {"imie": "dagmara", "nazwisko": "lewandowska"}
-# print(dictionary)
-# print(dictionary["imie"])
-# print(dictionary["nazwisko"])
-# print(dictionary.values())
-# print(dictionary.keys())
-# print(type(dictionary))
+print(dictionary)
+print(dictionary["imie"])
+print(dictionary["nazwisko"])
+print(dictionary.values())
+print(dictionary.keys())
+print(type(dictionary))
 # dicty charakteryzuja sie klamrami {} oraz tym ze posiadaja klucz wartosc
 
 string_jeden = "string1"
