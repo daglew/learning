@@ -8,6 +8,7 @@ It is a file about how to prepare environment.
 * [Install Notepad](#install-notepad)
 * [Create repository on github](#create-repository-on-github)
 * [Clone repository](#clone-repository-using-git-bash)
+* [Installation virtual environment](#installation-virtual-environment-venv)
 * [Create a new branch](#create-a-new-branch)
 * [Create prepare_environment file](#create-prepare_environment-file)
 * [Sprint1](#sprint1)
