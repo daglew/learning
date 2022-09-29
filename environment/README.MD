@@ -8,6 +8,7 @@ It is a file about how to prepare environment.
 * [Install Notepad](#install-notepad)
 * [Create repository on github](#create-repository-on-github)
 * [Clone repository](#clone-repository-using-git-bash)
+* [Installation virtual environment](#installation-virtual-environment-venv)
 * [Create a new branch](#create-a-new-branch)
 * [Create prepare_environment file](#create-prepare_environment-file)
 * [Sprint1](#sprint1)
@@ -76,6 +77,31 @@ Go to [notepad++](https://notepad-plus-plus.org/downloads/v8.4.1/)
 9. Back to Git Bash
 10. Clone repository to your local machine use command "git clone <copied link>"
 11. Check if folder "learning" is visible in folder "repositories"
+``` 
+## Installation virtual environment (venv)
+
+```
+1. Clone repository
+git clone https://github.com/daglew/first_test_project.git
+
+2. Go to project
+cd first_test_project/
+
+3. Tworzenie wirtualnego środowiska zwanego venv w aktualnej sciezce
+Create venv
+python3 -m venv ./venv
+
+4. Komenda aktywująca wirtualne środowisko
+Activate venv
+source venv/Scripts/activate
+
+5. Doinstalowanie paczki z wymaganiami
+Install requirements
+tworzenie pliku o nazwie requirements.txt
+pip install -r tests/requirements.txt
+
+6. set up interpreter
+PyCharm -> File -> Settings -> Python interpreter ->zębatka -> Add -> Existing environment -> ...  -> Interpreter -> <path>/venv/Scripts/python f.e C:\Users\dagle\Desktop\ANGIELSKI\KSIĄŻKI\first_test_project\venv\Scripts\python.exe
 ``` 
 ## Create a new branch
 
